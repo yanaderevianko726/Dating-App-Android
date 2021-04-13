@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/status_bar_latest_event_content"
+    android:layout_width="match_parent"
+    android:background="@drawable/shadow_gray"
+    android:clipToPadding="false"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_margin="0dp"
+        android:layout_width="match_parent"
+        android:clipToPadding="false"
+        android:layout_height="wrap_content"
+        android:background="@drawable/notification_background_rounded_with_border">
+
+        <ImageView
+            android:id="@+id/notification_image"
+            android:layout_width="70dp"
+            app:srcCompat="@drawable/ic_check"
+            android:padding="20dp"
+            android:tint="@color/white"
+            android:background="@drawable/bg_notification_image_success"
+            android:layout_height="80dp"/>
+
+        <TextView
+            android:id="@+id/notification_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            tools:text="@string/purchase_canceled"
+            android:layout_marginLeft="20dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

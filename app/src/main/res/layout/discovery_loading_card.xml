@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/encounters_profile_info_margin"
+    android:layout_marginLeft="@dimen/encounters_card_margin"
+    android:layout_marginRight="@dimen/encounters_card_margin"
+    android:layout_marginBottom="@dimen/encounters_profile_info_margin"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="@dimen/encounters_card_rounded_corner_margin">
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:shimmer_direction="left_to_right"
+        app:shimmer_highlight_color="@color/white"
+        app:shimmer_base_color="@color/white"
+        app:shimmer_duration="1500">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/encounters_skeleton_root"
+            android:layout_width="match_parent"
+            android:background="@color/grey_10"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/encounters_skeleton_profileInfoView"
+                android:layout_width="116dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/skeleton_encounter_top"
+                app:layout_constraintBottom_toTopOf="@+id/encounters_skeleton_profileWork"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/encounters_skeleton_profileWork"
+                android:layout_width="152dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/encounters_skeleton_profileEducation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/skeleton_encounter_bottom" />
+
+            <View
+                android:id="@+id/encounters_skeleton_profileEducation"
+                android:layout_width="152dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/encounters_skeleton_buttonBarGuideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/skeleton_encounter_bottom" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/encounters_skeleton_buttonBarGuideline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.868673" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.shimmer.ShimmerFrameLayout>
+
+</androidx.cardview.widget.CardView>
+

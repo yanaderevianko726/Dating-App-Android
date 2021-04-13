@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:id="@+id/screenConnectionLost"
+    android:background="#81000000"
+    android:padding="4dp"
+    android:layout_width="fill_parent"
+    android:layout_height="?actionBarSize"
+    android:animateLayoutChanges="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:id="@+id/screenConnectionLost_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="@string/error_network_connection_lost" />
+
+    <TextView
+        android:textSize="@dimen/smallTextSize"
+        android:gravity="center_horizontal"
+        android:id="@+id/screenConnectionLost_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/error_connection_non_modal_no_internet_description" />
+</LinearLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/smoking_group"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RadioButton
+        android:id="@+id/no_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="?android:selectableItemBackground"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/profile_no_answer"
+        android:textAlignment="textStart"
+        android:textColor="@color/edit_hint"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <RadioButton
+        android:id="@+id/smoke_heavy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="?android:selectableItemBackground"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/smoke_heavy"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <RadioButton
+        android:id="@+id/smoke_hate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="?android:selectableItemBackground"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/smoke_hate"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <RadioButton
+        android:id="@+id/smoke_not_like"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="?android:selectableItemBackground"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/smoke_not_like"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <RadioButton
+        android:id="@+id/smoke_social"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="?android:selectableItemBackground"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/smoke_social"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <RadioButton
+        android:id="@+id/smoke_occasionally"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="?android:selectableItemBackground"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/smoke_occasionally"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+</RadioGroup>

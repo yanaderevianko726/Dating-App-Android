@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="10dp"
+    android:paddingEnd="10dp"
+    android:orientation="vertical">
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.RoundedImage
+        android:id="@+id/spotlightProfilePhoto"
+        android:layout_width="@dimen/connections_avatarSize"
+        android:layout_height="@dimen/connections_avatarSize"
+        app:rounded_radius="@integer/profile_photo_rounded_corner"/>
+
+    <FrameLayout
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"
+        android:layout_marginRight="@dimen/size_0_25_negative"
+        android:layout_marginBottom="@dimen/size_0_25_negative"
+        android:background="@drawable/bg_badge_outline_spotlight"
+        android:padding="@dimen/size_0_25">
+
+        <ImageView
+            android:id="@+id/conversation_unreadCount"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:minWidth="@dimen/size_3_25"
+            app:srcCompat="@drawable/ic_badge_plus_red" />
+    </FrameLayout>
+</FrameLayout>

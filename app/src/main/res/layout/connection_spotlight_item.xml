@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="10dp"
+    android:layout_marginRight="5dp">
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/connections_avatarSize"
+        android:layout_height="@dimen/connections_avatarSize"
+        android:src="@drawable/photo_placeholder_grey" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+        android:id="@+id/read"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="top|end|center_vertical|center_horizontal|center"
+        android:layout_marginRight="@dimen/connections_promoIconMargin"
+        android:layout_marginBottom="@dimen/connections_promoIconMargin"
+        android:background="@drawable/bg_badge_outline"
+        android:padding="@dimen/connections_promoIconPadding"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/white"
+        app:srcCompat="?color_feature_liked_you"
+        android:layout_marginEnd="@dimen/connections_promoIconMargin" />
+
+
+    <ImageView
+        android:id="@+id/iconBadge"
+        android:layout_width="@dimen/connections_avatarIconSize"
+        android:layout_height="@dimen/connections_avatarIconSize"
+        android:layout_gravity="bottom|end|center_vertical|center_horizontal|center"
+        android:layout_marginRight="@dimen/connections_promoIconMargin"
+        android:layout_marginBottom="@dimen/connections_promoIconMargin"
+        android:background="@drawable/bg_badge_outline"
+        android:padding="@dimen/connections_promoIconPadding"
+        app:srcCompat="@drawable/ic_badge_feature_match"
+        android:layout_marginEnd="@dimen/connections_promoIconMargin" />
+
+</FrameLayout>

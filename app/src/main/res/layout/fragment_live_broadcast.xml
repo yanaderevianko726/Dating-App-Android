@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/streamingList_tabsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            style="@style/LiveTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:filterTouchesWhenObscured="true"
+            app:tabGravity="center"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_12"/>
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/streamingList_swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/streamingList_tabsLayout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/streamingList_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/live_streamers_row_offset"
+            android:paddingStart="@dimen/live_streamers_row_offset"
+            android:paddingEnd="@dimen/live_streamers_row_offset"
+            android:paddingBottom="64dp" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/streamingList_tabsLayout"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:tint="@color/grey_60"
+                app:srcCompat="@drawable/ic_users" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:text="@string/you_dont_have_any_people_near"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:textColor="@color/grey_60" />
+
+            <TextView
+                android:id="@+id/brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/no_one_found_update"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/grey_40" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="14dp"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/live_streamers_row_spacing"
+                    android:paddingStart="@dimen/live_streamers_item_spacing"
+                    android:paddingEnd="@dimen/live_streamers_item_spacing"
+                    layout="@layout/list_item_live_broadcast_general_user_skeleton"/>
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/live_streamers_row_spacing"
+                    android:paddingStart="@dimen/live_streamers_item_spacing"
+                    android:paddingEnd="@dimen/live_streamers_item_spacing"
+                    layout="@layout/list_item_live_broadcast_general_user_skeleton"/>
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/live_streamers_row_spacing"
+                    android:paddingStart="@dimen/live_streamers_item_spacing"
+                    android:paddingEnd="@dimen/live_streamers_item_spacing"
+                    layout="@layout/list_item_live_broadcast_general_user_skeleton"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false">
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/live_streamers_row_spacing"
+                    android:paddingStart="@dimen/live_streamers_item_spacing"
+                    android:paddingEnd="@dimen/live_streamers_item_spacing"
+                    layout="@layout/list_item_live_broadcast_general_user_skeleton"/>
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/live_streamers_row_spacing"
+                    android:paddingStart="@dimen/live_streamers_item_spacing"
+                    android:paddingEnd="@dimen/live_streamers_item_spacing"
+                    layout="@layout/list_item_live_broadcast_general_user_skeleton"/>
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/live_streamers_row_spacing"
+                    android:paddingStart="@dimen/live_streamers_item_spacing"
+                    android:paddingEnd="@dimen/live_streamers_item_spacing"
+                    layout="@layout/list_item_live_broadcast_general_user_skeleton"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/streamingList_goLiveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            app:drawableLeftCompat="@drawable/ic_white_circle"
+            android:text="@string/livestream_stream_go_live"
+            android:textAppearance="?attr/textStyleActionMediumInverse"
+            android:theme="@style/Button.Live" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

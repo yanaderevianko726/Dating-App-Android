@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_conversation"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:minHeight="?attr/listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/size_0_5"
+    android:paddingBottom="@dimen/size_0_5">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical|center_horizontal|center"
+        android:clickable="false"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:focusable="false">
+
+        <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/connections_avatarSize"
+            android:layout_height="@dimen/connections_avatarSize"
+            android:src="@drawable/photo_placeholder_grey" />
+
+        <ImageView
+            android:id="@+id/iconBadge"
+            android:layout_width="@dimen/connections_avatarIconSize"
+            android:layout_height="@dimen/connections_avatarIconSize"
+            android:layout_gravity="bottom|end|center_vertical|center_horizontal|center"
+            android:layout_marginRight="@dimen/connections_promoIconMargin"
+            android:layout_marginBottom="@dimen/connections_promoIconMargin"
+            android:background="@drawable/bg_badge_outline"
+            android:padding="@dimen/connections_promoIconPadding"
+            tools:src="@drawable/ic_badge_feature_match"
+            android:layout_marginEnd="@dimen/connections_promoIconMargin" />
+
+        <FrameLayout
+            android:id="@+id/countContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end|center_vertical|center_horizontal|center"
+            android:layout_marginRight="@dimen/size_0_5_negative"
+            android:layout_marginBottom="@dimen/size_0_5_negative"
+            android:background="@drawable/bg_badge_outline"
+            android:padding="@dimen/stroke_0_5"
+            android:visibility="visible"
+            android:layout_marginEnd="@dimen/size_0_5_negative">
+
+            <TextView
+                android:id="@+id/countBadge"
+                style="?attr/textStyleP2"
+                android:layout_width="@dimen/connections_avatarIconSize"
+                android:layout_height="@dimen/connections_avatarIconSize"
+                android:background="@drawable/bg_badge_red"
+                android:gravity="center"
+                android:minWidth="20dp"
+                android:padding="1dp"
+                android:textColor="@color/white"
+                tools:text="12"
+                android:textSize="12sp" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/size_9"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/connections_textLeftMargin"
+            android:paddingStart="@dimen/connections_textLeftMargin">
+
+            <LinearLayout
+                android:id="@+id/conversationPromo_contentContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/title"
+                            style="?attr/textStyleP1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="@dimen/size_0_5"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:ellipsize="end"
+                            tools:text="Maravilho Singa"
+                            android:maxLines="@integer/connections_promoTextMaxLines" />
+
+                        <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+                            android:id="@+id/peopleNearby_personStatus"
+                            android:layout_width="8dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp"
+                            android:src="@color/red_500"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginLeft="7dp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/favourite"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="5dp"
+                        android:scaleType="center"
+                        app:srcCompat="@drawable/ic_profile_favorite_added"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/message"
+                    style="?attr/textStyleP1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Visited you yesterday"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

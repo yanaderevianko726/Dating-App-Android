@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ownProfileRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/myProfileElementThreeSubtitlePlaceholder"
+        android:layout_width="60dp"
+        android:layout_height="10dp"
+        android:background="@color/gray_light"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementThreeSubtitle"
+        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementThreeSubtitle"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementThreeSubtitle"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementThreeSubtitle" />
+
+    <View
+        android:id="@+id/myProfileElementTwoSubtitlePlaceholder"
+        android:layout_width="40dp"
+        android:layout_height="10dp"
+        android:background="@color/gray_light"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoSubtitle"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoSubtitle"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoSubtitle" />
+
+    <View
+        android:id="@+id/myProfileElementTwoImagePlaceholder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/my_profile_loading_placeholder"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoImage"
+        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementTwoImage"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoImage"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoImage" />
+
+    <View
+        android:id="@+id/myProfileElementOneTitlePlaceholder"
+        android:layout_width="80dp"
+        android:layout_height="8dp"
+        android:background="@color/gray_light"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementOneTitle"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementOneTitle"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementOneTitle" />
+
+    <View
+        android:id="@+id/myProfileElementThreeTitlePlaceholder"
+        android:layout_width="90dp"
+        android:layout_height="8dp"
+        android:background="@color/gray_light"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementThreeTitle"
+        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementThreeTitle"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementThreeTitle"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementThreeTitle" />
+
+    <View
+        android:id="@+id/myProfileElementOneImagePlaceholder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/my_profile_loading_placeholder"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementOneImage"
+        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementOneImage"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementOneImage"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementOneImage" />
+
+    <View
+        android:id="@+id/myProfileElementOneSubtitlePlaceholder"
+        android:layout_width="40dp"
+        android:layout_height="10dp"
+        android:background="@color/gray_light"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementOneSubtitle"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementOneSubtitle"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementOneSubtitle" />
+
+    <View
+        android:id="@+id/myProfileElementThreeImagePlaceholder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/my_profile_loading_placeholder"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementThreeImage"
+        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementThreeImage"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementThreeImage"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementThreeImage" />
+
+    <View
+        android:id="@+id/myProfileElementTwoTitlePlaceholder"
+        android:layout_width="80dp"
+        android:layout_height="8dp"
+        android:background="@color/gray_light"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoTitle"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoTitle"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoTitle" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/myProfileElementPlaceholdersGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="myProfileElementThreeSubtitlePlaceholder,myProfileElementTwoSubtitlePlaceholder,myProfileElementTwoImagePlaceholder,myProfileElementOneTitlePlaceholder,myProfileElementThreeTitlePlaceholder,myProfileElementTwoTitlePlaceholder,myProfileElementOneImagePlaceholder,myProfileElementOneSubtitlePlaceholder,myProfileElementThreeImagePlaceholder" />
+
+    <ImageView
+        android:id="@+id/myProfileSettings"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="12dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_navigation_bar_settings"
+        android:layout_marginRight="4dp" />
+
+    <Space
+        android:id="@+id/myProfileSimulateToolbarSpace"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/myProfileToolbarLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/myProfileSimulateToolbarSpace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myProfileSimulateToolbarSpace" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/myProfileAppLogoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="myProfileSimulateToolbarSpace" />
+
+    <ImageView
+        android:id="@+id/myProfileEdit"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_navigation_bar_edit_profile"
+        android:layout_marginRight="4dp" />
+
+    <Space
+        android:id="@+id/myProfileTopAvatarSpace"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/my_profile_top_avatar_space"
+        app:layout_constraintBottom_toTopOf="@+id/myProfileAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/myProfileToolbarLogo"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <FrameLayout
+        android:id="@+id/myProfileAvatar"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/myProfileNameAndAge"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="@dimen/my_profile_max_avatar_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myProfileTopAvatarSpace">
+
+        <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/size_1"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/popularity_promoBadgeRight"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_gravity="bottom|end"
+            app:srcCompat="@drawable/ic_badge_add_photos" />
+    </FrameLayout>
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+        android:id="@+id/invisibleModeIcon"
+        android:layout_width="@dimen/icon_sm"
+        android:layout_height="@dimen/icon_sm"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/myProfileSubtitle"
+        app:layout_constraintEnd_toStartOf="@+id/myProfileNameAndAge"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myProfileAvatar"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_badge_feature_invisible_mode"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/myProfileNameAndAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="@dimen/my_profile_name_text_size"
+        tools:text="Maravilho Singa, 25"
+        app:layout_constraintBottom_toTopOf="@+id/myProfileSubtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/invisibleModeIcon"
+        app:layout_constraintTop_toBottomOf="@+id/myProfileAvatar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/myProfileSubtitle"
+        style="?attr/textStyleP3Gray40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:maxLines="1"
+        android:paddingBottom="8dp"
+        android:text="@string/tap_to_see"
+        app:layout_constraintBottom_toTopOf="@+id/myProfileBannerCardContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myProfileNameAndAge"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/ownProfileElementThreeImage"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileElementThreeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/ownProfileElementThreeTitle"
+        style="?attr/textStyleP3Gray40"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:text="@string/popularity"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileElementThreeSubtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementThreeImage" />
+
+    <TextView
+        android:id="@+id/ownProfileElementThreeSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:textSize="@dimen/my_profile_cta_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementThreeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementThreeTitle"
+        android:layout_marginRight="4dp" />
+
+    <ImageView
+        android:id="@+id/ownProfileElementOneImage"
+        android:layout_width="@dimen/icon_xlg"
+        android:layout_height="@dimen/icon_xlg"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileElementHorizontalDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementVerticalDivider"
+        app:srcCompat="@drawable/ic_credits_small_heart"
+        android:visibility="visible"
+        android:layout_marginLeft="20dp" />
+
+    <ImageView
+        android:id="@+id/ownProfileElementTwoImage"
+        android:layout_width="@dimen/icon_xlg"
+        android:layout_height="@dimen/icon_xlg"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider"
+        android:layout_marginLeft="20dp" />
+
+    <View
+        android:id="@+id/ownProfileElementVerticalDivider"
+        android:layout_width="0.5dp"
+        android:layout_height="@dimen/my_profile_vertical_divider_height"
+        android:background="@color/gray_light"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/ownProfileElementHorizontalDivider"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="@dimen/my_profile_element_height"
+        android:background="@color/gray_light"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"
+        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ownProfileElementOneTitle"
+        style="?attr/textStyleP3Gray40"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/credits"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileElementOneSubtitle"
+        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintStart_toEndOf="@+id/ownProfileElementOneImage"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="4dp" />
+
+    <TextView
+        android:id="@+id/ownProfileElementOneSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/my_profile_cta_text_size"
+        android:textColor="@color/black"
+        tools:text="10"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileElementHorizontalDivider"
+        app:layout_constraintLeft_toLeftOf="@+id/ownProfileElementOneTitle"
+        app:layout_constraintRight_toLeftOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementOneTitle"
+        android:layout_marginRight="4dp" />
+
+    <TextView
+        android:id="@+id/ownProfileElementTwoTitle"
+        style="?attr/textStyleP3Gray40"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileElementTwoSubtitle"
+        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintStart_toEndOf="@+id/ownProfileElementTwoImage"
+        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="4dp" />
+
+    <TextView
+        android:id="@+id/ownProfileElementTwoSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/my_profile_cta_text_size"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"
+        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoTitle"
+        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementTwoTitle"
+        android:layout_marginRight="4dp" />
+
+    <Space
+        android:id="@+id/ownProfileElementOnePlusSpace"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementOneImage"
+        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementOneImage" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ownProfileElementOnePlus"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementOnePlusSpace"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementOnePlusSpace"
+        app:srcCompat="@drawable/ic_plus_own_profile" />
+
+    <Space
+        android:id="@+id/ownProfileElementTwoPlusSpace"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoImage"
+        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementTwoImage" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ownProfileElementTwoPlus"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoPlusSpace"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoPlusSpace"
+        app:srcCompat="@drawable/ic_plus_own_profile" />
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/ownProfileElementThreePlusSpace"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementThreeImage"
+        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementThreeImage" />
+
+    <ImageButton
+        android:id="@+id/ownProfileElementThreePlus"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:scaleType="centerInside"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/ownProfileElementThreePlusSpace"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementThreePlusSpace"
+        app:srcCompat="@drawable/ic_plus_own_profile" />
+
+    <View
+        android:id="@+id/ownProfileElementOneClickableArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileElementHorizontalDivider"
+        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementVerticalDivider" />
+
+    <View
+        android:id="@+id/ownProfileElementTwoClickableArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"
+        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider" />
+
+    <View
+        android:id="@+id/ownProfileElementThreeClickableArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementVerticalDivider" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/ownProfileElementsExceptPlusGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="ownProfileElementOnePlusSpace,ownProfileElementThreeImage,ownProfileElementOneImage,ownProfileElementTwoSubtitle,ownProfileElementOneTitle,ownProfileElementOneSubtitle,ownProfileElementTwoTitle,ownProfileElementThreePlusSpace,ownProfileElementTwoImage,ownProfileElementThreeSubtitle,ownProfileElementThreeTitle,ownProfileElementTwoPlusSpace" />
+
+    <Space
+        android:id="@+id/myProfileElementsTop"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementVerticalDivider" />
+
+    <FrameLayout
+        android:id="@+id/myProfileBannerCardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/profile_banner"
+        app:layout_constraintBottom_toBottomOf="@+id/myProfileElementsTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/myProfileBannerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/notification_background_rounded_with_border"
+            android:minHeight="76dp">
+
+            <View
+                android:id="@+id/myProfileBannerImagePlaceholder"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/my_profile_loading_placeholder"
+                app:layout_constraintBottom_toBottomOf="@+id/myProfileBannerImage"
+                app:layout_constraintEnd_toEndOf="@+id/myProfileBannerImage"
+                app:layout_constraintStart_toStartOf="@+id/myProfileBannerImage"
+                app:layout_constraintTop_toTopOf="@+id/myProfileBannerImage" />
+
+            <View
+                android:id="@+id/myProfileBannerTextPlaceholder"
+                android:layout_width="115dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/gray_light"
+                app:layout_constraintStart_toEndOf="@+id/myProfileBannerImagePlaceholder"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="12dp" />
+
+            <View
+                android:id="@+id/myProfileBannerSecondTextPlaceholder"
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="22dp"
+                android:background="@color/gray_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/myProfilePlaceholderBarrier"
+                app:layout_constraintStart_toEndOf="@+id/myProfileBannerImagePlaceholder"
+                app:layout_constraintWidth_max="200dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="8dp" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/myProfileBannerPlaceholdersGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="myProfileBannerImagePlaceholder,myProfileBannerTextPlaceholder,myProfileBannerSecondTextPlaceholder" />
+
+            <!--app:borderRadius="@dimen/my_profile_banner_radius"-->
+            <View
+                android:id="@+id/myProfileBannerBackground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/myProfileBannerImage"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/myProfileBannerText"
+                style="?attr/textStyleP1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/myProfileBannerArrow"
+                app:layout_constraintStart_toEndOf="@+id/myProfileBannerImage"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="8dp" />
+
+            <ImageView
+                android:id="@+id/myProfileBannerArrow"
+                android:layout_width="@dimen/icon_md"
+                android:layout_height="@dimen/icon_md"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_right_gray"
+                android:tint="@color/white"
+                android:layout_marginRight="16dp" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/myProfileBannerContentGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="myProfileBannerText,myProfileBannerImage,myProfileBannerBackground" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/myProfilePlaceholderBarrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="start"
+                app:constraint_referenced_ids="myProfileBannerArrow"
+                app:layout_constraintStart_toStartOf="@+id/myProfileBannerArrow" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <include
+        android:id="@+id/ownProfileNavBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        layout="@layout/nearby_explanation_header"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

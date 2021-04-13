@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/messageInputContainer"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/instant_chat_height"
+    android:background="@drawable/bg_match_chat_input_collapsed">
+
+    <EditText
+        android:id="@+id/messageInputHint"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/instant_chat_height"
+        android:layout_marginStart="@dimen/size_1_5"
+        android:layout_marginLeft="@dimen/size_1_5"
+        android:layout_marginTop="@dimen/size_0_25"
+        android:layout_marginBottom="@dimen/size_0_25"
+        android:background="@null"
+        android:hint="@string/type_msg"
+        android:imeOptions="actionSend"
+        android:inputType="none|text|textCapSentences|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/size_1"
+        android:paddingRight="@dimen/size_1"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toStartOf="@+id/sendMessageButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/sendMessageButton"
+        android:layout_width="@dimen/size_4"
+        android:layout_height="@dimen/size_4"
+        android:layout_marginEnd="@dimen/size_1"
+        android:layout_marginRight="@dimen/size_1"
+        android:background="@drawable/bg_circle_action_main_color"
+        android:enabled="false"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/messageInputHint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_send_white" />
+
+    <ImageView
+        android:id="@+id/sendMessageGoodOpenersHint"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:enabled="false"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/sendMessageButton"
+        app:layout_constraintEnd_toEndOf="@+id/sendMessageButton"
+        app:layout_constraintStart_toStartOf="@+id/sendMessageButton"
+        app:layout_constraintTop_toTopOf="@+id/sendMessageButton"
+        app:srcCompat="@drawable/ic_badge_feature_icebreaker" />
+</androidx.constraintlayout.widget.ConstraintLayout>

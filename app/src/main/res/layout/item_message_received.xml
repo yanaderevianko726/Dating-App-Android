@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
+    android:paddingTop="8dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.vanniktech.emoji.EmojiTextView
+                android:id="@+id/text_message_body"
+                tools:text="hello, hello!"
+                android:padding="10dp"
+                android:background="@drawable/bubble_left_rect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:emojiSize="22dp"/>
+
+            <RelativeLayout
+                android:id="@+id/image_lyt"
+                android:gravity="center"
+                android:visibility="visible"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.RoundedImage
+                    android:id="@+id/chatMessage_photo_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    app:rounded_radius="60"/>
+
+                <ProgressBar
+                    android:id="@+id/chatMessage_photo_loading"
+                    android:layout_centerInParent="true"
+                    style="@style/Widget.AppCompat.ProgressBar"
+                    android:theme="@style/CircularProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_message_time"
+            tools:text="11:40"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/textStyleP3Gray40" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

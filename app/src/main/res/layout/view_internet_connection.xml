@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:visibility="invisible"
+    android:background="@android:color/white">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:progressTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/text_wait_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="@string/splash_loading"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/button_refresh"
+        android:layout_width="10dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/wait_refresh"
+        android:textColor="@color/white"
+        android:textStyle="normal|bold" />
+
+</RelativeLayout>

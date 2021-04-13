@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/registration_scene_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:clipChildren="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/RegistrationHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/size_1"
+        android:paddingRight="@dimen/size_1"
+        android:text="@string/registration_gender_header" />
+
+    <Button
+        android:id="@+id/Registration_buttonMale"
+        style="?buttonStyleTertiary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_1_5"
+        android:text="@string/registration_gender_male" />
+
+    <Button
+        android:id="@+id/Registration_buttonFemale"
+        style="?buttonStyleTertiary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_1_5"
+        android:text="@string/registration_gender_female" />
+</LinearLayout>

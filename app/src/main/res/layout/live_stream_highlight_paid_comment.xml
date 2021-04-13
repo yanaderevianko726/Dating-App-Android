@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/liveStreaming_highlight_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_md"
+    android:layout_marginEnd="@dimen/spacing_md"
+    android:background="@drawable/notification_background_rounded_with_border"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/spacing_md"
+    android:paddingBottom="@dimen/spacing_md">
+
+    <ImageView
+        android:id="@+id/liveStreaming_highlight_senderImage"
+        android:layout_width="@dimen/icon_xlg"
+        android:layout_height="@dimen/icon_xlg"
+        android:layout_marginStart="@dimen/spacing_lg"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/spacing_lg" />
+
+    <TextView
+        android:id="@+id/liveStreaming_highlight_title"
+        style="?attr/textStyleP2Gray40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_sm"
+        android:layout_marginEnd="@dimen/spacing_sm"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Maravilho"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/liveStreaming_highlight_description"
+        app:layout_constraintEnd_toStartOf="@+id/liveStreaming_highlight_cost"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/liveStreaming_highlight_senderImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/liveStreaming_highlight_cost"
+        style="?attr/textStyleP3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_sm"
+        android:layout_marginEnd="@dimen/spacing_md"
+        app:drawableLeftCompat="@drawable/ic_livestream_tokens_in_chat"
+        android:drawablePadding="4dp"
+        tools:text="1000"
+        android:textColor="@color/generic_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@+id/liveStreaming_highlight_senderImage"
+        android:layout_marginLeft="@dimen/spacing_sm"
+        android:layout_marginRight="@dimen/spacing_md" />
+
+    <TextView
+        android:id="@+id/liveStreaming_highlight_description"
+        style="?attr/textStyleP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_sm"
+        android:layout_marginEnd="@dimen/spacing_md"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:minWidth="112dp"
+        android:textColor="@color/black"
+        tools:text="Sent a gift"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/liveStreaming_highlight_senderImage"
+        app:layout_constraintTop_toBottomOf="@+id/liveStreaming_highlight_title"
+        android:layout_marginLeft="@dimen/spacing_sm"
+        android:layout_marginRight="@dimen/spacing_md" />
+</androidx.constraintlayout.widget.ConstraintLayout>

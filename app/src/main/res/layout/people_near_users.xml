@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="3dp"
+        android:src="@drawable/profile_no_photo_male" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ivPhoto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/ivPhoto"
+        android:layout_below="@+id/ivPhoto"
+        android:gravity="center"
+        android:maxLines="1"
+        tools:text="Maravilho"
+        android:textColor="@color/black"
+        android:textIsSelectable="false"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_bg_rounded_corners"
+        app:drawableLeftCompat="@drawable/ic_near_me_white_24dp"
+        android:drawablePadding="5dp"
+        android:paddingBottom="2dp"
+        android:paddingEnd="4dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingStart="4dp"
+        android:paddingTop="2dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+        android:id="@+id/onlie"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/ivPhoto"
+        android:layout_alignRight="@+id/ivPhoto"
+        android:layout_alignTop="@+id/ivPhoto"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@color/red_500"
+        app:civ_border_color="@color/white"
+        app:civ_border_overlay="true"
+        app:civ_border_width="1dp"
+        app:civ_fill_color="@color/white"
+        android:layout_marginEnd="15dp" />
+
+
+</RelativeLayout>

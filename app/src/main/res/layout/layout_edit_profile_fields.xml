@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/editMyProfile_relationship"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/black"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_profile_badge_relationship_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_relationship"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/profile_relationship"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="Taken"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/gray_dark"
+            app:srcCompat="@drawable/ic_arrow_right_gray"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+
+    <LinearLayout
+        android:id="@+id/editMyProfile_sexuality"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/black"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_profile_badge_sexuality_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_sexuality"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/profile_sexuality"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="Heterosexual"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/gray_dark"
+            app:srcCompat="@drawable/ic_arrow_right_gray"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:id="@+id/editMyProfile_height"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/black"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_profile_badge_appearance_height_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_height"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/profile_height"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="174 cm"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/gray_dark"
+            app:srcCompat="@drawable/ic_arrow_right_gray"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:id="@+id/editMyProfile_body"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/black"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_profile_badge_appearance_body_type_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_body"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/profile_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="Average"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/gray_dark"
+            app:srcCompat="@drawable/ic_arrow_right_gray"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:id="@+id/editMyProfile_living"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/black"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_profile_badge_living_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_living"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/profile_living"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="With partner"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/gray_dark"
+            app:srcCompat="@drawable/ic_arrow_right_gray"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:id="@+id/editMyProfile_children"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/black"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_profile_badge_children_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_children"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/profile_children"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="Already have"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/gray_dark"
+            app:srcCompat="@drawable/ic_arrow_right_gray"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:id="@+id/editMyProfile_smoking"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/black"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_profile_badge_smoking_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_smoking"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/profile_smoking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="I hate smoking"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/gray_dark"
+            app:srcCompat="@drawable/ic_arrow_right_gray"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:id="@+id/editMyProfile_drinking"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/black"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_profile_badge_drinking_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_drinking"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/profile_drinking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="I drink socially"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/gray_dark"
+            app:srcCompat="@drawable/ic_arrow_right_gray"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:id="@+id/editMyProfile_language"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:visibility="visible"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/black"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_profile_badge_languages_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_language"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/profile_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="English"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/gray_dark"
+            app:srcCompat="@drawable/ic_arrow_right_gray"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:background="@color/divider_color" />
+
+    <LinearLayout
+        android:id="@+id/editMyProfile_appearance"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:visibility="gone"
+        android:clipToPadding="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_edit_tiw_title"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cmd_add"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:tint="@color/gray_dark"
+            app:srcCompat="@drawable/ic_arrow_right_gray"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:background="@color/divider_color" />
+</merge>

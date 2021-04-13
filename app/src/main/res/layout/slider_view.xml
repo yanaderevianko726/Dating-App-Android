@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.autoimageslider.SliderPager
+        android:id="@+id/vp_slider_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.autoimageslider.IndicatorView.PageIndicatorView
+        android:id="@+id/pager_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_margin="12dp"
+        android:visibility="gone"
+        android:layout_gravity="center|bottom" />
+
+</FrameLayout>

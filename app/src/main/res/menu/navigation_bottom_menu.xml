@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_public"
+        android:icon="@drawable/ic_tabbar_people_nearby"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_encounters"
+        android:icon="@drawable/ic_tabbar_encounters_new"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_live"
+        android:icon="@drawable/ic_tabbar_live"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_mess"
+        android:icon="@drawable/ic_tabbar_connections"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_tabbar_my_profile"
+        android:title="" />
+
+</menu>

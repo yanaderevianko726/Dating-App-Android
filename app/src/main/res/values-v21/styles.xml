@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.Design.TopSheet.Modal" parent="android:Widget">
+        <item name="android:background">@drawable/rounded_dialog_top</item>
+        <!--<item name="android:background">@android:color/transparent</item>-->
+        <!--<item name="android:background">?android:attr/colorBackground</item>-->
+        <item name="android:elevation">@dimen/top_sheet_modal_elevation</item>
+        <item name="behavior_peekHeight">@dimen/top_sheet_modal_peek_height</item>
+        <item name="behavior_hideable">true</item>
+    </style>
+
+    <style name="Widget.Design.CenterSheet.Modal" parent="android:Widget">
+        <!--<item name="android:background">@drawable/rounded_dialog_center</item>-->
+        <!--<item name="android:background">@android:color/transparent</item>-->
+        <!--<item name="android:background">?android:attr/colorBackground</item>-->
+        <!--<item name="android:elevation">@dimen/center_sheet_modal_elevation</item>-->
+        <!--<item name="behavior_peekHeight">@dimen/top_sheet_modal_peek_height</item>-->
+        <item name="behavior_peekHeight">@dimen/center_sheet_modal_peek_height</item>
+        <item name="behavior_hideable">true</item>
+    </style>
+
+    <style name="Platform.V21.AppCompat.Light" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_light</item>
+        <item name="android:textColorLink">?android:colorAccent</item>
+        <item name="android:buttonBarStyle">?buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
+        <item name="android:textColorLinkInverse">?android:colorAccent</item>
+    </style>
+</resources>

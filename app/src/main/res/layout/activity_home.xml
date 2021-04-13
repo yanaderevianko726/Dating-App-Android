@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/toolbar_logo_center"
+            android:id="@+id/layout_app_logo_app_bar"/>
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout_app_logo_app_bar"
+            android:layout_above="@+id/navigation_layout"
+            android:animateLayoutChanges="true">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/navigation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/shawdow_view"
+                android:layout_width="wrap_content"
+                android:layout_height="0.1dp"
+                android:visibility="gone"
+                android:background="@color/grey_2_alpha_15"/>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navigation_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                app:itemIconTint="@drawable/nav_bottom_color_selector"
+                app:itemTextColor="@color/white"
+                app:itemIconSize="28dp"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/navigation_bottom_menu" />
+
+            <RelativeLayout
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.Internet.CheckServer
+                android:id="@+id/wait_for_internet_connection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"/>
+
+        </LinearLayout>-->
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <include layout="@layout/livestreaming_viewer_header_streamer_info" />
+
+    <TextView
+        android:id="@+id/livestreamingHeader_viewers"
+        style="?attr/textStyleP3Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/bg_livestreaming_rounded_rect_black_alpha_carrot"
+        app:drawableLeftCompat="@drawable/ic_livestream_viewers_white"
+        android:drawablePadding="4dp"
+        android:paddingStart="6dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="4dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCenterView"
+        app:layout_constraintEnd_toStartOf="@+id/livestreamingHeader_tokens"
+        app:layout_constraintTop_toTopOf="@+id/imageCenterView" />
+
+    <TextView
+        android:id="@+id/livestreamingHeader_tokens"
+        style="?attr/textStyleP3Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/bg_livestreaming_rounded_rect_black_alpha_carrot"
+        app:drawableLeftCompat="@drawable/ic_livestream_credit"
+        android:drawablePadding="4dp"
+        android:paddingStart="6dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="4dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCenterView"
+        app:layout_constraintEnd_toStartOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/imageCenterView" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="livestreamingHeader_close,livestreamingHeader_minimize"
+        android:layout_marginRight="48dp" />
+
+    <ImageView
+        android:id="@+id/livestreamingHeader_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCenterView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageCenterView"
+        app:srcCompat="@drawable/ic_livestream_close" />
+
+    <ImageView
+        android:id="@+id/livestreamingHeader_minimize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCenterView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageCenterView"
+        app:srcCompat="@drawable/ic_livestream_minimize" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/live_streamers_row_spacing"
+    android:paddingStart="@dimen/live_streamers_item_spacing"
+    android:paddingEnd="@dimen/live_streamers_item_spacing">
+
+    <include layout="@layout/list_item_live_broadcast_user_photo" />
+
+    <include layout="@layout/list_item_live_broadcast_round_corners" />
+
+    <View
+        android:id="@+id/goalHighlight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.4"
+        android:background="@drawable/bg_goal_rectangle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/liveBroadcastItem_userPhoto"
+        app:layout_constraintEnd_toEndOf="@+id/liveBroadcastItem_userPhoto"
+        app:layout_constraintStart_toStartOf="@+id/liveBroadcastItem_userPhoto"
+        app:layout_constraintTop_toTopOf="@+id/liveBroadcastItem_userPhoto" />
+
+    <ImageView
+        android:id="@+id/goalIcon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/liveBroadcastItem_userPhoto"
+        app:layout_constraintTop_toTopOf="@+id/liveBroadcastItem_userPhoto"
+        app:srcCompat="@drawable/ic_livestream_goals_44" />
+
+    <TextView
+        android:id="@+id/liveBroadcastItem_userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="?attr/textStyleP2"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveBroadcastItem_userPhoto" />
+
+    <ImageView
+        android:id="@+id/liveBroadcastItem_viewersCountIcon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:srcCompat="@drawable/ic_livestream_viewers_counter_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveBroadcastItem_userName" />
+
+    <TextView
+        android:id="@+id/liveBroadcastItem_viewersCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:alpha="0.7"
+        android:textAppearance="?attr/textStyleP3Gray40"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@+id/liveBroadcastItem_viewersCountIcon"
+        app:layout_constraintTop_toBottomOf="@+id/liveBroadcastItem_userName" />
+
+    <TextView
+        android:id="@+id/liveBroadcastItem_recordedVideoCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:textAppearance="?attr/textStyleP3Gray40"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveBroadcastItem_userName" />
+
+    <ImageView
+        android:id="@+id/liveBroadcastItem_favouriteButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="10dp"
+        android:padding="4dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_live_action_follow"
+        app:layout_constraintBottom_toTopOf="@+id/liveBroadcastItem_userName"
+        app:layout_constraintStart_toStartOf="@+id/liveBroadcastItem_userName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

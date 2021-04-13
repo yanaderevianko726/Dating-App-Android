@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="0.5dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:id="@+id/liked"
+        android:orientation="vertical"
+        android:background="@drawable/liked_you_btn_bg"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_height="250dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:tint="@color/gray"
+            app:srcCompat="@drawable/ic_like_you_heart"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/disliked"
+        android:orientation="vertical"
+        android:background="@drawable/liked_you_btn_bg"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_height="250dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:tint="@color/gray"
+            app:srcCompat="@drawable/ic_close_animated_vote_no"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/panel"
+        android:orientation="vertical"
+        android:background="@drawable/liked_you_btn_bg"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="250dp">
+
+    <RelativeLayout
+        android:id="@+id/layoutProfile"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/profilePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@color/highlight_light_ripple"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_overlay"/>
+
+
+        <TextView
+            android:id="@+id/nameAndAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/profilePhoto"
+            android:textColor="@color/white"
+            android:layout_margin="15dp"
+            android:textSize="15sp"
+            tools:text="Maravilho, 25"/>
+
+    </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/layoutProfile"
+            android:background="@color/gray_12"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/dislikeBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_close_animated_vote_no"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_24"/>
+
+            <ImageView
+                android:id="@+id/likeBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_like_you_heart"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

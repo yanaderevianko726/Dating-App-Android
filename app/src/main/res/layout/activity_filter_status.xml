@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/filter_status_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView android:textAppearance="?textAppearanceBody1"
+        android:id="@+id/filter_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nearby_filter" />
+    <RadioGroup
+        android:orientation="horizontal"
+        android:id="@+id/filter_radio_group"
+        android:background="@drawable/rectangle_roundedx2_with_border_filter"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_marginTop="12.0dip">
+
+        <RadioButton
+            android:id="@+id/radio_filter_all"
+            android:text="@string/cmd_filter_all"
+            style="@style/pnb_age_button" />
+
+        <RadioButton android:id="@+id/radio_filter_online"
+            android:text="@string/cmd_filter_online"
+            style="@style/pnb_age_button" />
+
+        <RadioButton android:id="@+id/radio_filter_new"
+            android:text="@string/cmd_filter_new"
+            style="@style/pnb_age_button" />
+    </RadioGroup>
+</LinearLayout>

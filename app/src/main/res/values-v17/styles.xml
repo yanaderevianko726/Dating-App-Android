@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.Button.Tinted" parent="@style/Widget.Button">
+        <item name="android:paddingStart">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/button_padding_horizontal</item>
+        <item name="backgroundTint">@drawable/tint_button</item>
+        <item name="backgroundTintMode">src_atop</item>
+    </style>
+</resources>

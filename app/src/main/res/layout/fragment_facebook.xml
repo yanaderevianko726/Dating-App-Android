@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/transparent"
+            android:drawingCacheQuality="auto"
+            android:orientation="vertical"
+            android:clipToPadding="false"
+            android:visibility="gone"
+            android:padding="@dimen/item_offset"
+            android:verticalSpacing="2dp"
+            android:horizontalSpacing="2dp"
+            android:transcriptMode="alwaysScroll" />
+
+        <LinearLayout
+            android:id="@+id/layout_no_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/you_haven_t_connected_your_facebook_yet"
+                android:gravity="center"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_connect_instagram"
+                android:text="@string/connect_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?buttonStyleSocialFacebook"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progress_instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateOnly="true"
+            android:visibility="visible"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:theme="@style/CircularProgress" />
+
+    </LinearLayout>
+
+</RelativeLayout>

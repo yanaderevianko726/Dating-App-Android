@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:orientation="vertical"
+    android:id="@+id/payments_rootview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_gravity="bottom"
+        android:id="@+id/payments_purchaseButton"
+        android:padding="0.0dip"
+        android:text="@string/continue_"
+        android:background="@drawable/bg_button_normal_solid_dark"
+        android:theme="@style/Button.Payment"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip" />
+
+    <View
+        android:id="@+id/payments_purchaseButtonShadow"
+        android:background="@drawable/bg_button_container_elevation_shadow_light"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="8.0dip"
+        android:layout_marginBottom="56.0dip" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="56.0dip">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:background="@null"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:expanded="true"
+            app:elevation="0.0dip"
+            app:layout_behavior=".utils.FlingBehavior"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll|snap">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:fitsSystemWindows="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="exitUntilCollapsed|scroll|snap">
+
+                <View
+                    android:background="@drawable/bg_toolbar_elevation_shadow_light"
+                    android:layout_width="fill_parent"
+                    android:layout_height="4.0dip"
+                    android:layout_marginTop="?actionBarSize"
+                    app:layout_collapseMode="pin"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?actionBarSize">
+
+                    <FrameLayout
+                        android:id="@+id/productList_carouselPager_parent"
+                        android:clipChildren="false"
+                        android:layout_width="fill_parent"
+                        android:layout_height="150.0dip">
+
+                        <!--<o.bWR
+                            android:id="@id/productList_carouselPager"
+                            android:clipChildren="false"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="32.0dip"
+                            android:minHeight="150.0dip" />-->
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/productList_carouselPager"
+                            android:clipChildren="false"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="32.0dip"
+                            android:minHeight="150.0dip"
+                            android:layout_marginEnd="32.0dip" />
+
+                    </FrameLayout>
+
+                    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.dotsindicator.SpringDotsIndicator
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/productList_carouselIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        app:dampingRatio="0.5"
+                        app:dotsColor="@color/black"
+                        app:dotsStrokeColor="@color/grey_4"
+                        app:dotsCornerRadius="8dp"
+                        app:dotsSize="10dp"
+                        app:dotsSpacing="4dp"
+                        app:dotsStrokeWidth="1dp"
+                        app:stiffness="300" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="pin">
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:id="@+id/productList_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="?actionBarSize"
+                        android:maxLines="1"
+                        android:fontFamily="sans-serif-medium"
+                        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/productList_paymentProviderList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@color/white"
+                app:tabGravity="center"
+                app:tabIconTint="@color/grey_2"
+                app:tabIndicatorColor="@color/orange_4"
+                app:tabIndicatorHeight="2dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/grey_2"
+                app:tabTextColor="@color/grey_2"/>
+
+            <LinearLayout
+                android:id="@+id/empty_layout"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="25dp"
+                android:visibility="visible"
+                android:layout_below="@+id/productList_paymentProviderList"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:tint="@color/grey_60"
+                        app:srcCompat="@drawable/ic_users" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:text="@string/you_dont_have_any_people_near"
+                        android:textSize="18sp"
+                        android:textColor="@color/grey_60" />
+
+                    <TextView
+                        android:id="@+id/brief"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:gravity="center"
+                        android:text="@string/no_one_found_update"
+                        android:textSize="14sp"
+                        android:textColor="@color/grey_40" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:theme="@style/CircularProgress"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productList_productPackageList"
+                android:scrollbars="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="visible"
+                android:layout_below="@id/productList_paymentProviderList" />
+
+            <View
+                android:background="@drawable/bg_toolbar_elevation_shadow_light"
+                android:layout_width="fill_parent"
+                android:layout_height="4.0dip"
+                android:layout_below="@id/productList_paymentProviderList" />
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/space"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+                android:id="@+id/avatar_img"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/type_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom|center"
+                android:background="@drawable/bg_badge_outline"
+                android:padding="@dimen/stroke_0_5"
+                app:srcCompat="@drawable/ic_badge_feature_spotlight" />
+
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom|center_vertical|center_horizontal|center"
+                android:layout_marginLeft="@dimen/size_2"
+                android:background="@drawable/bg_badge_outline"
+                android:padding="@dimen/stroke_0_5"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_badge_feature_riseup" />
+
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom|center_vertical|center_horizontal|center"
+                android:background="@drawable/bg_badge_outline"
+                android:padding="@dimen/stroke_0_5"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_badge_feature_spotlight" />
+
+            <ImageView
+                android:id="@+id/icon3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom|center_vertical|center_horizontal|center"
+                android:layout_marginRight="@dimen/size_2"
+                android:background="@drawable/bg_badge_outline"
+                android:padding="@dimen/stroke_0_5"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_badge_feature_extra_shows" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="@dimen/my_profile_name_text_size"
+            tools:text="@string/get_more_visits" />
+
+        <TextView
+            android:id="@+id/explain_txt"
+            style="?attr/textStyleP3Gray40"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:paddingBottom="8dp"
+            android:textColor="@color/grey_3_black_10"
+            tools:text="@string/get_more_visits_explain" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/activate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="@string/activate"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/cost_txt"
+        style="?attr/textStyleP3Gray40"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:padding="10dp"
+        tools:text="Service cost: 200 credits" />
+</RelativeLayout>

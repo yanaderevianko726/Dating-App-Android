@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <include layout="@layout/view_streamer_ready" />
+    <include layout="@layout/view_streaming_loading_progress" />
+    <include layout="@layout/view_live_streamer_final_share" />
+    <include layout="@layout/view_live_viewer_final" />
+
+    <FrameLayout
+        android:id="@+id/liveStreaming_stubLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/liveStreaming_videoAndControlsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <com.sugardaddy.citascasualesconocergentenuevacercadeti.utils.liveUtils.VideoGridContainer
+            android:id="@+id/liveStreaming_videoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.sugardaddy.citascasualesconocergentenuevacercadeti.utils.liveUtils.VideoGridContainer>
+
+        <View
+            android:id="@+id/liveStreaming_dimOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_1_alpha_85"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/liveStreaming_headerDefaultDim"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:alpha="0.1"
+                android:background="@drawable/bg_live_stream_shadow_top"
+                app:layout_constraintTop_toTopOf="@+id/liveStreaming_headerStub" />
+
+            <View
+                android:id="@+id/liveStreaming_headerGoalDim"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:alpha="0"
+                android:background="@drawable/bg_live_stream_shadow_top_goal"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/liveStreaming_headerStub" />
+
+            <ViewStub
+                android:id="@+id/liveStreaming_headerStub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inflatedId="@+id/liveStreaming_headerStub"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/liveStreaming_statusBlocker"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/liveStreaming_messageList"
+                app:layout_constraintTop_toBottomOf="@+id/liveStreaming_headerStub"
+                app:layout_constraintVertical_bias="1"
+                android:orientation="horizontal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:alpha="0.15"
+                android:background="@drawable/bg_live_stream_shadow_bottom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/liveStreaming_messageList" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/liveStreaming_messageList"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:fadingEdgeLength="90dp"
+                android:requiresFadingEdge="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/liveStreaming_footer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_max="300dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/liveStreaming_statusBlocker" />
+
+            <TextView
+                android:id="@+id/liveStreaming_showNewComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_life_streaming_show_new_comments"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:minHeight="32dp"
+                android:outlineProvider="background"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:visibility="gone"
+                android:singleLine="true"
+                android:text="@string/livestream_new_comments_button_title"
+                android:textAppearance="?attr/textStyleP3"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/liveStreaming_messageList"
+                app:layout_constraintEnd_toEndOf="@+id/liveStreaming_messageList"
+                app:layout_constraintStart_toStartOf="@+id/liveStreaming_messageList" />
+
+            <ViewStub
+                android:id="@+id/liveStreaming_footer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inflatedId="@+id/liveStreaming_footer"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/liveStreaming_InputView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+           <!-- <include
+                android:id="@+id/liveStreaming_footer"
+                layout="@layout/view_stream_viewer_footer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inflatedId="@+id/liveStreaming_footer"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/liveStreaming_InputView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>-->
+
+            <LinearLayout
+                android:id="@+id/liveStreaming_InputView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/sendGiftButton"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    app:srcCompat="@drawable/ic_livestream_gift_live" />
+
+                <LinearLayout
+                    android:id="@+id/send_message_panel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_gift_message"
+                    android:orientation="horizontal"
+                    android:padding="4dp"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/MessageWrapper"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/type_msg"
+                        android:imeOptions="actionSend"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_24"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/sendMessageButton"
+                        android:layout_width="@dimen/size_chat"
+                        android:layout_height="@dimen/size_chat"
+                        android:background="@drawable/bg_circle_action_main_color"
+                        android:enabled="false"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/ic_send_white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/more_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/ic_more" />
+
+                    <ImageView
+                        android:id="@+id/camera_btn"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center"
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/ic_autorenew_black_24dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/liveStreaming_highlightContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/liveStreaming_headerStub" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/liveStreaming_fullscreenGift"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:scaleType="centerCrop" />
+</FrameLayout>

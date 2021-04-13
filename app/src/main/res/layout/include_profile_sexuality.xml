@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sexuality_group"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RadioButton
+        android:id="@+id/no_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="?android:selectableItemBackground"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/profile_no_answer"
+        android:textAlignment="textStart"
+        android:textColor="@color/edit_hint"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <RadioButton
+        android:id="@+id/bisexual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="?android:selectableItemBackground"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/sex_bi"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <RadioButton
+        android:id="@+id/lesbian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="?android:selectableItemBackground"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/sex_lesbian"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <RadioButton
+        android:id="@+id/ask_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="?android:selectableItemBackground"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/sex_ask"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+    <RadioButton
+        android:id="@+id/straight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="?android:selectableItemBackground"
+        android:button="@null"
+        android:drawableEnd="?android:attr/listChoiceIndicatorSingle"
+        android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="@string/sex_stra"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_color" />
+
+</RadioGroup>

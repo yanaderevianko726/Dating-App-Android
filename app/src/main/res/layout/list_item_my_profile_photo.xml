@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp">
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.RoundedImage
+        android:id="@+id/photo_photo"
+        android:layout_width="110dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:rounded_radius="@integer/profile_photo_rounded_corner" />
+
+    <View
+        android:id="@+id/photo_photoSelected"
+        android:layout_width="110dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_profile_photo"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/photo_isVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_profile_video_play" />
+
+    <LinearLayout
+        android:id="@+id/photo_privateContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_generic_button_lock" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="6dp" />
+
+        <TextView
+            android:id="@+id/photo_privateCount"
+            style="?attr/textStyleP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/photo_coaching"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="bottom|left|center_vertical|center_horizontal|center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_12">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <ImageView
+            android:id="@+id/done_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_margin="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_check" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/blockUser_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/size_2"
+                android:paddingTop="@dimen/size_2"
+                android:paddingRight="@dimen/size_2"
+                android:paddingBottom="@dimen/default_min_button_size">
+
+                <FrameLayout
+                    android:id="@+id/blockUser_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/floor_box_light"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical|center_horizontal|center"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        android:text="@string/report_user_block"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:paddingStart="8dp" />
+
+                    <CheckBox
+                        android:id="@+id/blockUser_blockCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical|center_horizontal|center"
+                        android:clickable="true"
+                        android:checked="true"
+                        android:paddingRight="@dimen/size_0_5"
+                        android:paddingEnd="@dimen/size_0_5" />
+                </FrameLayout>
+
+                <CheckedTextView
+                    android:id="@+id/blockUser_dontReport"
+                    style="@style/filter_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="@string/report_user_dont"
+                    android:gravity="center"
+                    android:paddingRight="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <CheckedTextView
+                    android:id="@+id/blockUser_reportFake"
+                    style="@style/filter_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="@string/report_user_fake"
+                    android:gravity="center"
+                    android:paddingRight="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <CheckedTextView
+                    android:id="@+id/blockUser_reportInappropriate"
+                    style="@style/filter_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="@string/report_user_inappropriate"
+                    android:gravity="center"
+                    android:paddingRight="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <CheckedTextView
+                    android:id="@+id/blockUser_reportRude"
+                    style="@style/filter_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="@string/report_user_rude"
+                    android:gravity="center"
+                    android:paddingRight="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <CheckedTextView
+                    android:id="@+id/blockUser_reportSpam"
+                    style="@style/filter_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="@string/report_user_spam"
+                    android:gravity="center"
+                    android:paddingRight="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <CheckedTextView
+                    android:id="@+id/blockUser_reportScam"
+                    style="@style/filter_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="@string/report_user_scam"
+                    android:gravity="center"
+                    android:paddingRight="8dp"
+                    android:paddingEnd="8dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

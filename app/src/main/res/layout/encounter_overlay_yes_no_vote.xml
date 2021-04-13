@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/encounters_onboarding_overlay"
+    android:paddingBottom="36dp">
+
+    <ImageView
+        android:id="@+id/arrow_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:scaleX="-1"
+        app:srcCompat="@drawable/ic_encounters_onboarding_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="52dp" />
+
+    <ImageView
+        android:id="@+id/arrow_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        app:srcCompat="@drawable/ic_encounters_onboarding_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="52dp" />
+
+    <TextView
+        style="@style/TextStyle.ButtonActionMedium.Inverse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/encounters_onboarding_tooltip_how_to_vote"
+        app:layout_constraintEnd_toEndOf="@+id/arrow_right"
+        app:layout_constraintStart_toStartOf="@+id/arrow_left"
+        app:layout_constraintTop_toBottomOf="@+id/arrow_left" />
+</androidx.constraintlayout.widget.ConstraintLayout>

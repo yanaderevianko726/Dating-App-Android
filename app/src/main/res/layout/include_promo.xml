@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/popularity_promoItem" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:paddingLeft="@dimen/size_1" android:paddingTop="@dimen/size_0_25" android:paddingRight="@dimen/size_1" android:paddingBottom="@dimen/size_0_5" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/white" app:cardCornerRadius="@dimen/cardview_radius" app:cardElevation="@dimen/cardview_elevation" app:cardUseCompatPadding="true" app:contentPaddingBottom="@dimen/size_3" app:contentPaddingLeft="20dp" app:contentPaddingRight="20dp" app:contentPaddingTop="16dp">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@+id/get_3x_more_popular_img" android:layout_width="@dimen/size_9" android:layout_height="@dimen/size_9" android:layout_marginBottom="@dimen/size_1" android:scaleType="fitCenter"/>
+                    <ImageView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/popularity_promoBadgeRight" android:background="@drawable/bg_badge_outline" android:padding="@dimen/stroke_0_5" android:layout_width="26dp" android:layout_height="26dp" android:layout_marginLeft="@dimen/size_2" app:srcCompat="@drawable/ic_badge_feature_riseup"/>
+                    <ImageView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/popularity_promoBadge" android:background="@drawable/bg_badge_outline" android:padding="@dimen/stroke_0_5" android:layout_width="26dp" android:layout_height="26dp" app:srcCompat="@drawable/ic_badge_feature_spotlight"/>
+                    <ImageView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/popularity_promoBadgeLeft" android:background="@drawable/bg_badge_outline" android:padding="@dimen/stroke_0_5" android:layout_width="26dp" android:layout_height="26dp" android:layout_marginRight="@dimen/size_2" app:srcCompat="@drawable/ic_badge_feature_extra_shows"/>
+                </FrameLayout>
+                <TextView android:id="@+id/popularity_promoTitle"
+                    android:paddingLeft="@dimen/size_2"
+                    android:paddingBottom="@dimen/size_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?attr/textStyleP1"
+                    android:paddingStart="@dimen/size_2"
+                    android:paddingEnd="@dimen/size_2"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_gravity="center"
+                    android:id="@+id/get_3x_more_popular_button"
+                    android:layout_width="match_parent"
+                    android:theme="@style/Button.Rise.Up"
+                    android:textColor="@color/white"
+                    android:text="@string/get_3x_more_popular"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/popularity_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_1"
+                    android:text="@string/cost_of_service_200_credits"
+                    style="?attr/textStyleP2Gray40"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/popularity_savingText"
+        android:background="@drawable/ic_ribbon"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="@string/save_50"
+        android:layout_marginTop="@dimen/size_2"
+        android:drawableRight="@drawable/ic_credit"
+        android:drawablePadding="@dimen/size_0_75"
+        style="?attr/textStyleP2Gray40"
+        android:layout_marginStart="5dp"
+        android:drawableEnd="@drawable/ic_credit" />
+</FrameLayout>

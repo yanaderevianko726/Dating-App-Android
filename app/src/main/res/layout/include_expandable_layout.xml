@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.expansionpanel.ExpansionHeader
+        android:id="@+id/expansionHeader"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:expansion_headerIndicator="@id/headerIndicator"
+        app:expansion_layout="@id/expansionLayout"
+        app:expansion_toggleOnClick="true">
+
+        <LinearLayout
+            android:id="@+id/connections_layout"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_layout_connections"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/margin_connection_layouts"
+            android:layout_height="40dp"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/icon_header"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:tint="@color/black"/>
+
+            <TextView
+                android:id="@+id/counter_txt"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/circle_counter_connections"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/connection_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:text="@string/connection_all_connections" />
+
+            <ImageView
+                android:id="@+id/headerIndicator"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:srcCompat="@drawable/ic_arrow_right_gray_40" />
+
+            <ImageView
+                android:id="@+id/clear_header"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_filter_clear" />
+
+        </LinearLayout>
+
+    </com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.expansionpanel.ExpansionHeader>
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout"
+        app:expansion_expanded="false"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/chats_layout"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_layout_connections"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/margin_connection_layouts"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/chats_counter_txt"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/circle_counter_connections"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="0" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/connection_chats" />
+
+                <ImageView
+                    android:id="@+id/clear_chats"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_filter_clear" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/online_layout"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_layout_connections"
+                android:layout_marginBottom="@dimen/margin_connection_layouts"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_connections_filter_online" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/connection_online" />
+
+                <ImageView
+                    android:id="@+id/clear_online"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_filter_clear" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vitits_layout"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_layout_connections"
+                android:layout_marginBottom="@dimen/margin_connection_layouts"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_navigation_bar_visible" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/connection_visits" />
+
+                <ImageView
+                    android:id="@+id/clear_visits"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_filter_clear" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/likes_layout"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_layout_connections"
+                android:layout_marginBottom="@dimen/margin_connection_layouts"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_navigation_bar_liked_you" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/connection_likes" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/favorites_layout"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_layout_connections"
+                android:layout_marginBottom="@dimen/margin_connection_layouts"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/favorites_counter_txt"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/circle_counter_connections"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="0" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/connection_favorites" />
+
+                <ImageView
+                    android:id="@+id/clear_favorites"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_filter_clear" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.expansionpanel.ExpansionLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/connections_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp"
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:tint="@color/grey_60"
+                app:srcCompat="@drawable/ic_users" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:text="@string/you_dont_have_any_people_near"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:textColor="@color/grey_60" />
+
+            <TextView
+                android:id="@+id/brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/no_one_found_update"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/grey_40" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:theme="@style/CircularProgress"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

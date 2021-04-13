@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_dialog_video_chat_confirmation"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center"
+    android:maxWidth="@dimen/size_44"
+    android:minWidth="@dimen/size_44"
+    android:orientation="vertical">
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+        android:id="@+id/videoChatConfirmation_avatar"
+        tools:src="@color/gray_12"
+        android:layout_width="@dimen/size_15"
+        android:layout_height="@dimen/size_15"
+        android:layout_marginTop="@dimen/size_5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/videoChatConfirmation_title"
+        style="?attr/textStyleH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_2"
+        android:gravity="center_horizontal"
+        tools:text="Maavilho Singa, 25"
+        android:paddingLeft="@dimen/size_2"
+        android:paddingRight="@dimen/size_2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/videoChatConfirmation_calling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_1"
+        android:gravity="center_horizontal"
+        android:text="@string/video_chat_calling_title"
+        android:textColor="@color/generic_green"
+        android:textSize="@dimen/textSizeP2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_3"
+        android:layout_marginBottom="@dimen/size_4"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/videoChatConfirmation_rejectButton"
+            android:layout_width="@dimen/size_9"
+            android:layout_height="@dimen/size_9"
+            android:layout_marginLeft="@dimen/size_2"
+            android:layout_marginRight="@dimen/size_2"
+            android:background="@drawable/bg_red_round_button_selector"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_videocall_hang_up" />
+
+        <ImageButton
+            android:id="@+id/videoChatConfirmation_acceptVideoButton"
+            android:layout_width="@dimen/size_9"
+            android:layout_height="@dimen/size_9"
+            android:layout_marginLeft="@dimen/size_2"
+            android:layout_marginRight="@dimen/size_2"
+            android:background="@drawable/bg_green_round_button_selector"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_videocall_video_on" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/videoChat_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/remote_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/videoChat_backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/videoChat_backgroundOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <FrameLayout
+            android:id="@+id/videoChat_headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <ImageView
+                android:id="@+id/videoChat_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="8dp"
+                android:tint="@color/gray_24"
+                app:srcCompat="@drawable/bg_logo_splash" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/videoChat_texts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="160dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/videoChat_userNameAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/videoChat_userName"
+                style="?attr/textStyleH1Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/videoChat_userAge"
+                android:layout_toLeftOf="@+id/videoChat_userAge"
+                android:ellipsize="end"
+                tools:text="Maravilho Singa"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/videoChat_userAge"
+                style="?attr/textStyleH1Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                tools:text=", 25"
+                android:maxLines="1" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/videoChat_callStatus"
+            style="?attr/textStyleP2Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:text="@string/video_chat_calling_title" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/videoChat_callButtonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/videoChat_hungUp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/bg_red_round_button_selector"
+            android:scaleType="centerCrop"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_videocall_hang_up" />
+
+        <ImageButton
+            android:id="@+id/videoChat_switchCamera"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@color/transparent"
+            android:layout_toStartOf="@+id/videoChat_hungUp"
+            android:layout_toLeftOf="@+id/videoChat_hungUp"
+            app:srcCompat="@drawable/ic_videocall_audio_on"
+            android:tint="@color/white"
+            android:scaleType="centerCrop" />
+
+        <ImageButton
+            android:id="@+id/videoChat_switchSpeaker"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_toEndOf="@+id/videoChat_hungUp"
+            android:layout_toRightOf="@+id/videoChat_hungUp"
+            app:srcCompat="@drawable/ic_videocall_speaker_off"
+            android:tint="@color/white"
+            android:background="@color/transparent"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/videoChat_timerText"
+            style="?attr/textStyleP2Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/videoChat_hungUp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            tools:text="End"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/videoChat_microphoneText"
+            style="?attr/textStyleP2Inverse"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/videoChat_switchSpeaker"
+            android:layout_marginTop="8dp"
+            android:layout_toStartOf="@+id/videoChat_hungUp"
+            android:layout_toLeftOf="@+id/videoChat_hungUp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/video_chat_switcher_off"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/videoChat_videoText"
+            style="?attr/textStyleP2Inverse"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/videoChat_switchSpeaker"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/videoChat_hungUp"
+            android:layout_toRightOf="@+id/videoChat_hungUp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/video_chat_switcher_off"
+            android:visibility="gone" />
+    </RelativeLayout>
+</FrameLayout>

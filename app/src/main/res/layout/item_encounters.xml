@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/encounters_profile_info_margin"
+    android:layout_marginLeft="@dimen/encounters_card_margin"
+    android:layout_marginRight="@dimen/encounters_card_margin"
+    android:layout_marginBottom="@dimen/encounters_profile_info_margin"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="@dimen/encounters_card_rounded_corner_margin">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/profilePhoto"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@color/highlight_light_ripple"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:background="@drawable/bg_overlay"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_above="@+id/vote_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nameAndAge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mabry_regular_pro"
+                tools:text="Anjinha Real, 27"/>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="19sp"
+                android:textStyle="normal"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mabry"
+                tools:text="Luanda"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/vote_panel"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/dislikeBtn"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_floating_action_no" />
+
+            <ImageView
+                android:id="@+id/crushBtn"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_floating_action_crush" />
+
+            <ImageView
+                android:id="@+id/likeBtn"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_floating_action_yes" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

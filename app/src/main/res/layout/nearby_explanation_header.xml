@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt"
+    android:id="@+id/peoplenearby_explanation"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="27dp"
+    android:animateLayoutChanges="true">
+
+    <TextView
+        android:textAppearance="?attr/textStyleH2"
+        android:gravity="center"
+        android:id="@+id/peopleNearby_explanationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/peoplenearby_explanation_title"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/peopleNearby_explanationSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/peoplenearby_explanation_subtitle"
+        style="?attr/textStyleP1Gray60"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/peopleNearby_explanationButton"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="48dp"
+        android:text="@string/peoplenearby_explanation_button"/>
+</LinearLayout>

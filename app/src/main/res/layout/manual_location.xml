@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:minHeight="?actionBarSize"
+        app:contentInsetStart="0.0dip">
+
+        <TextView
+            android:textAppearance="?textAppearanceHeader3"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/where" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <EditText
+        android:textColor="@color/black"
+        android:textColorHint="@color/edit_hint"
+        android:id="@+id/search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11.0dip"
+        android:layout_marginTop="11.0dip"
+        android:layout_marginRight="11.0dip"
+        android:hint="@string/enter_city"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:inputType="textFilter|textNoSuggestions"
+        android:imeOptions="actionNone|flagNoAccessoryAction|flagNoEnterAction|flagNoExtractUi" />
+
+    <LinearLayout
+        android:id="@+id/people_nearby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="11dp"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            android:text="@string/people_nearby"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@color/divider_color" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/places_recycler_view"
+            android:background="#FFF"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateOnly="true"
+            android:visibility="visible"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:theme="@style/CircularProgress" />
+    </FrameLayout>
+</LinearLayout>

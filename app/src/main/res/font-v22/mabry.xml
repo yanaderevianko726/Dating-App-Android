@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <font android:font="@font/mabry_regular_pro" android:fontWeight="600" android:fontStyle="normal" app:font="@font/mabry_regular_pro" app:fontStyle="normal" app:fontWeight="600"/>
+</font-family>

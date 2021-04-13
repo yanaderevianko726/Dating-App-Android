@@ -1,0 +1,200 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!-- General spacing-->
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="spacing_small">3dp</dimen>
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_xmedium">7dp</dimen>
+    <dimen name="spacing_middle">10dp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_smlarge">18dp</dimen>
+    <dimen name="spacing_mlarge">20dp</dimen>
+    <dimen name="spacing_mxlarge">25dp</dimen>
+    <dimen name="spacing_xlarge">35dp</dimen>
+    <dimen name="spacing_xmlarge">40dp</dimen>
+    <dimen name="spacing_xxlarge">50dp</dimen>
+    <dimen name="spacing_xxxlarge">55dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="streamer_name_max_width">92dp</dimen>
+
+    <dimen name="my_profile_top_avatar_space">12dp</dimen>
+    <dimen name="my_profile_element_height">72dp</dimen>
+    <dimen name="my_profile_max_avatar_size">140dp</dimen>
+    <dimen name="my_profile_min_add_photos_icon_size">46dp</dimen>
+    <dimen name="my_profile_name_text_size">20sp</dimen>
+    <dimen name="my_profile_banner_radius">16dp</dimen>
+    <dimen name="my_profile_cta_text_size">15sp</dimen>
+    <dimen name="my_profile_vertical_divider_height">144.5dp</dimen>
+
+    <dimen name="icon_lg">32dp</dimen>
+    <dimen name="icon_md">24dp</dimen>
+    <dimen name="icon_sm">22dp</dimen>
+    <dimen name="icon_xlg">36dp</dimen>
+    <dimen name="icon_xsm">16dp</dimen>
+    <dimen name="icon_xxlg">48dp</dimen>
+
+    <dimen name="smallTextSize">15.0sp</dimen>
+
+    <dimen name="textSizeH1">22.0sp</dimen>
+    <dimen name="textSizeH2">20.0sp</dimen>
+    <dimen name="textSizeH3">18.0sp</dimen>
+    <dimen name="textSizeP1">16.0sp</dimen>
+    <dimen name="textSizeP2">15.0sp</dimen>
+    <dimen name="textSizeP3">13.0sp</dimen>
+    <dimen name="textSizeTitle">18.0sp</dimen>
+    <dimen name="menuTextSize">14.0sp</dimen>
+    <dimen name="textSizeBody1">18.0sp</dimen>
+    <dimen name="textSizeBody2">17.0sp</dimen>
+    <dimen name="textSizeBody3">16.0sp</dimen>
+    <dimen name="textSizeBody4">14.0sp</dimen>
+    <item type="dimen" name="mediumTextSize">@dimen/textSizeBody3</item>
+    <dimen name="textSizeHeader3">18.0sp</dimen>
+    <dimen name="stroke_0_25">1.0dip</dimen>
+    <dimen name="sephiroth_range_progress_bar_height_material">2dp</dimen>
+    <dimen name="sephiroth_range_progress_bar_tick_mark_height_material">3.5dp</dimen>
+    <dimen name="sephiroth_range_progress_bar_tick_mark_width_material">3.5dp</dimen>
+
+    <dimen name="cosmos_button_corner_radius">10.0dip</dimen>
+    <dimen name="cosmos_button_stroke_width">1.0dip</dimen>
+    <dimen name="button_width">320.0dip</dimen>
+    <dimen name="button_height">48.0dip</dimen>
+    <dimen name="button_padding_horizontal">30.0dip</dimen>
+    <dimen name="button_padding_vertical">14.0dip</dimen>
+    <dimen name="textSizeActionMedium">16.0sp</dimen>
+    <dimen name="textSizeActionSmall">15.0sp</dimen>
+    <dimen name="popularity_navbar_size">24.0dip</dimen>
+    <dimen name="top_sheet_modal_elevation">16dp</dimen>
+    <dimen name="top_sheet_modal_peek_height">256dp</dimen>
+
+    <dimen name="center_sheet_modal_elevation">16dp</dimen>
+    <dimen name="center_sheet_modal_peek_height">0dp</dimen>
+    <dimen name="center_sheet_rounded_corner_margin">14dp</dimen>
+    <dimen name="center_sheet_margin">10dp</dimen>
+    <dimen name="center_sheet_top_margin">84dp</dimen>
+    <dimen name="center_sheet_bottom_margin">42dp</dimen>
+
+    <dimen name="size_0_5">4.0dip</dimen>
+    <dimen name="size_0_5_negative">-4.0dip</dimen>
+    <item type="dimen" name="popularity_day_radius">@dimen/size_2</item>
+
+    <dimen name="size_0_75">6dp</dimen>
+    <dimen name="size_0_75_negative">-6dp</dimen>
+    <dimen name="size_1">8.0dip</dimen>
+    <dimen name="size_1_25">10.0dip</dimen>
+    <dimen name="size_1_5">12.0dip</dimen>
+    <dimen name="size_2">16.0dip</dimen>
+    <dimen name="size_2_5">20.0dip</dimen>
+    <dimen name="size_3">24.0dip</dimen>
+    <dimen name="size_4">32.0dip</dimen>
+    <dimen name="size_5">40.0dip</dimen>
+    <dimen name="size_chat">35.0dip</dimen>
+    <dimen name="size_6">48.0dip</dimen>
+    <dimen name="size_6_25">50.0dip</dimen>
+    <dimen name="size_6_5">52.0dip</dimen>
+    <dimen name="size_6_75">54.0dip</dimen>
+    <dimen name="size_6_75_negative">-54.0dip</dimen>
+    <dimen name="stroke_0_5">2dp</dimen>
+    <dimen name="stroke_0_75">3dp</dimen>
+    <dimen name="size_8">64.0dip</dimen>
+    <dimen name="size_10">80.0dip</dimen>
+    <dimen name="size_10_5">84.0dip</dimen>
+    <dimen name="size_12_5">100.0dip</dimen>
+    <dimen name="size_1_75">14.0dip</dimen>
+    <dimen name="item_offset">0.5dp</dimen>
+    <dimen name="size_0_25">2.0dip</dimen>
+    <dimen name="size_0_25_negative">-2.0dip</dimen>
+    <dimen name="size_9">72dp</dimen>
+    <dimen name="size_9_5">76dp</dimen>
+    <dimen name="size_9_75">78dp</dimen>
+    <dimen name="badge_corner_radius">48dp</dimen>
+    <dimen name="size_2_5_negative">-20dp</dimen>
+    <dimen name="size_7">56dp</dimen>
+    <dimen name="size_19">152dp</dimen>
+    <dimen name="size_4_5">36.0dip</dimen>
+    <dimen name="size_3_5">28dp</dimen>
+    <dimen name="size_3_5_negative">-28dp</dimen>
+    <dimen name="size_18">144dp</dimen>
+    <dimen name="size_8_negative">-64dp</dimen>
+    <dimen name="size_3_25">26dp</dimen>
+    <dimen name="size_3_25_negative">-26dp</dimen>
+    <dimen name="size_11">88dp</dimen>
+    <dimen name="size_15">120dp</dimen>
+    <dimen name="size_44">352dp</dimen>
+
+
+    <dimen name="font_size_header_3">20sp</dimen>
+    <dimen name="default_min_button_size">48dp</dimen>
+
+    <dimen name="design_navigation_elevation">16.0dip</dimen>
+    <dimen name="design_navigation_icon_padding">32.0dip</dimen>
+    <dimen name="design_navigation_icon_size">24.0dip</dimen>
+    <dimen name="design_navigation_item_horizontal_padding">16.0dip</dimen>
+    <dimen name="design_navigation_item_icon_padding">32.0dip</dimen>
+    <dimen name="design_navigation_max_width">280.0dip</dimen>
+    <dimen name="design_navigation_padding_bottom">8.0dip</dimen>
+    <dimen name="design_navigation_separator_vertical_padding">8.0dip</dimen>
+
+    <dimen name="cardview_compat_inset_shadow">1.0dip</dimen>
+    <dimen name="cardview_default_elevation">2.0dip</dimen>
+    <dimen name="cardview_default_radius">2.0dip</dimen>
+    <dimen name="cardview_elevation">2.0dip</dimen>
+    <dimen name="cardview_radius">2.0dip</dimen>
+
+    <dimen name="encounters_card_rounded_corner">20dp</dimen>
+    <dimen name="encounters_card_rounded_corner_margin">14dp</dimen>
+    <dimen name="encounters_crush_button_margin_right">14dp</dimen>
+    <dimen name="encounters_card_margin">16dp</dimen>
+    <dimen name="encounters_profile_info_margin">8dp</dimen>
+    <dimen name="encounters_card_corner">10dp</dimen>
+
+    <dimen name="button_with_shadow_padding">16dp</dimen>
+    <dimen name="button_with_shadow_size_with_padding">96dp</dimen>
+
+    <dimen name="connections_avatarIconSize">24dp</dimen>
+    <dimen name="connections_avatarSize">74dp</dimen>
+    <dimen name="connections_favoriteIconSize">16dp</dimen>
+    <dimen name="connections_promoIconMargin">0dp</dimen>
+    <dimen name="connections_promoIconPadding">0dp</dimen>
+    <dimen name="connections_sidePaddings">16dp</dimen>
+    <dimen name="connections_spotlightItemSpacing">8dp</dimen>
+    <dimen name="connections_textLeftMargin">12dp</dimen>
+
+    <dimen name="navbar_height">@dimen/size_6</dimen>
+    <dimen name="merged_connections_filter_height_with_padding_negative">-44dp</dimen>
+
+    <dimen name="margin_connection_layouts">6dp</dimen>
+    <dimen name="instant_chat_height">48dp</dimen>
+    <dimen name="chat_bubble_radius">19dp</dimen>
+    <dimen name="chat_bubble_radius_small">4dp</dimen>
+    <dimen name="mmg_match_reduced_size">30dp</dimen>
+    <dimen name="mmg_match_size">30dp</dimen>
+    <dimen name="mmg_top_reduced_size">31dp</dimen>
+    <dimen name="mmg_top_size">16dp</dimen>
+    <dimen name="mmg_image_size">116dp</dimen>
+    <dimen name="mutual_attraction_chat_input_width">300dp</dimen>
+    <dimen name="mmg_chat_side_margin">30dp</dimen>
+    <dimen name="mmg_chat_bottom_margin">60dp</dimen>
+    <dimen name="mmg_image_title_top_margin_when_match">16dp</dimen>
+    <dimen name="mmg_image_title_top_margin_when_no_match">31dp</dimen>
+
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+
+    <dimen name="live_streamers_item_spacing">2dp</dimen>
+    <dimen name="live_streamers_row_offset">12dp</dimen>
+    <dimen name="live_streamers_row_spacing">16dp</dimen>
+    <dimen name="livestream_chat_avatar_size">32dp</dimen>
+    <dimen name="livestream_chat_message_shadow_dx">0</dimen>
+    <dimen name="livestream_chat_message_shadow_dy">1</dimen>
+    <dimen name="livestream_chat_message_shadow_radius">4</dimen>
+    <dimen name="livestream_highight_view_height">90dp</dimen>
+    <dimen name="livestream_token_corner_radius">6dp</dimen>
+    <dimen name="livestream_token_min_progress">1dp</dimen>
+    <dimen name="call_connection_padding">8dp</dimen>
+    <dimen name="rv_spance_4">4dp</dimen>
+    <dimen name="rv_spance_60">60dp</dimen>
+
+
+</resources>

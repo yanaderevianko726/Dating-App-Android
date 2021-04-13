@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/payments_rootview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/payments_purchaseButton"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_button_normal_solid_dark"
+        android:padding="0.0dip"
+        android:text="@string/continue_"
+        android:theme="@style/Button.Payment" />
+
+    <View
+        android:id="@+id/payments_purchaseButtonShadow"
+        android:layout_width="fill_parent"
+        android:layout_height="8.0dip"
+        android:layout_marginBottom="56.0dip"
+        android:background="@drawable/bg_button_container_elevation_shadow_light"
+        android:visibility="gone" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="56.0dip">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:elevation="0.0dip"
+            app:expanded="true"
+            app:layout_behavior=".utils.FlingBehavior"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll|snap">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="exitUntilCollapsed|scroll|snap">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="4.0dip"
+                    android:layout_marginTop="?actionBarSize"
+                    android:background="@drawable/bg_toolbar_elevation_shadow_light"
+                    app:layout_collapseMode="pin"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?actionBarSize"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/productList_carouselPager_parent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="150.0dip"
+                        android:clipChildren="false">
+
+                        <!--<o.bWR
+                            android:id="@id/productList_carouselPager"
+                            android:clipChildren="false"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="32.0dip"
+                            android:minHeight="150.0dip" />-->
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/productList_carouselPager"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="32.0dip"
+                            android:layout_marginRight="32.0dip"
+                            android:clipChildren="false"
+                            android:minHeight="150.0dip" />
+
+                    </FrameLayout>
+
+                    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.dotsindicator.SpringDotsIndicator
+                        android:id="@+id/productList_carouselIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp"
+                        app:dampingRatio="0.5"
+                        app:dotsColor="@color/black"
+                        app:dotsCornerRadius="8dp"
+                        app:dotsSize="10dp"
+                        app:dotsSpacing="4dp"
+                        app:dotsStrokeColor="@color/grey_4"
+                        app:dotsStrokeWidth="1dp"
+                        app:stiffness="300" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="pin">
+
+                    <TextView
+                        android:id="@+id/productList_title"
+                        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="?actionBarSize"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_vertical"
+                        android:maxLines="1" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productList_paymentProviderList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/empty_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="25dp"
+                android:visibility="visible"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:id="@+id/empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="25dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/ic_users"
+                        app:tint="@color/grey_60" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:text="@string/you_dont_have_any_people_near"
+                        android:textColor="@color/grey_60"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/brief"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:gravity="center"
+                        android:text="@string/no_one_found_update"
+                        android:textColor="@color/grey_40"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="25dp"
+                    android:visibility="visible">
+
+                    <ProgressBar
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/CircularProgress"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productList_productPackageList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/productList_paymentProviderList"
+                android:scrollbars="vertical"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="4.0dip"
+                android:layout_below="@id/productList_paymentProviderList"
+                android:background="@drawable/bg_toolbar_elevation_shadow_light" />
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

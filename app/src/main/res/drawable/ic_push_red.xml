@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="77dp" android:width="161dp" android:viewportWidth="161" android:viewportHeight="77">
+    <path android:fillColor="@color/badoo_token_feature_liked_you" android:pathData="M158.95,77L5.72,77C0.91,61.93 -0.84,46.65 2.58,33.88C9.05,9.73 33.81,-4.69 57.77,1.73C71.64,5.45 82.75,15.54 87.93,28.76C99.01,19.9 113.68,16.71 127.55,20.43C151.51,26.85 165.74,51.72 159.27,75.87C159.17,76.25 159.06,76.62 158.95,77Z" android:strokeColor="#00000000" android:strokeWidth="1"/>
+</vector>

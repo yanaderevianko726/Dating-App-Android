@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/liveBroadcastItem_corners"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@drawable/fg_rounded_corners"
+    app:layout_constraintBottom_toBottomOf="@+id/liveBroadcastItem_userPhoto"
+    app:layout_constraintEnd_toEndOf="@+id/liveBroadcastItem_userPhoto"
+    app:layout_constraintStart_toStartOf="@+id/liveBroadcastItem_userPhoto"
+    app:layout_constraintTop_toTopOf="@+id/liveBroadcastItem_userPhoto" />

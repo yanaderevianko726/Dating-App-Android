@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_cheese"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:clipToPadding="false"
+    android:background="@drawable/rounded_dialog_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingLeft="45.0dip"
+        android:paddingRight="45.0dip"
+        android:paddingTop="20.0dip"
+        android:paddingBottom="20.0dip"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_dialog_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="30.0dip"
+            app:srcCompat="@drawable/ic_say_cheese" />
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12.0dip"
+            android:text="@string/say_cheese"
+            android:textSize="@dimen/textSizeH1" />
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo_of_yourself"
+            android:textColor="@color/grey_60"/>
+
+        <Button
+            android:id="@+id/primary_action"
+            style="?buttonStylePrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.0dip"
+            android:text="@string/add_photos" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

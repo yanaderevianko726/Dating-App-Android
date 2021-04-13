@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:background="@color/colorPrimary"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/size_7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/matchScreen_title"
+                style="?attr/textStyleH1Inverse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/match_popup_view_title" />
+
+            <FrameLayout
+                android:id="@+id/matchScreen_imageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/size_3_5">
+
+                <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.RoundedImage
+                    android:id="@+id/matchScreen_myImage"
+                    android:layout_width="@dimen/size_18"
+                    android:layout_height="@dimen/size_18"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/size_8"
+                    android:layout_marginTop="@dimen/size_1_25"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:scaleType="centerCrop"
+                    android:rotation="10"
+                    android:src="@color/white"
+                    android:layout_marginStart="@dimen/size_8"
+                    app:rounded_radius="@integer/mutual_attraction_image_rounded_corner"/>
+
+                <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.RoundedImage
+                    android:id="@+id/matchScreen_otherUserImage"
+                    android:layout_width="@dimen/size_18"
+                    android:layout_height="@dimen/size_18"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/size_8_negative"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:scaleType="centerCrop"
+                    android:src="@color/white"
+                    android:rotation="-10"
+                    android:layout_marginStart="@dimen/size_8_negative"
+                    app:rounded_radius="@integer/mutual_attraction_image_rounded_corner"/>
+
+                <ImageView
+                    android:id="@+id/matchScreen_heart"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="bottom|center_vertical|center_horizontal|center"
+                    android:layout_margin="@dimen/size_2"
+                    app:srcCompat="@drawable/ic_floating_action_match"
+                    android:scaleType="fitCenter" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/matchScreen_message"
+                style="?attr/textStyleP1Inverse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_2_5"
+                android:layout_marginTop="@dimen/size_1"
+                android:layout_marginRight="@dimen/size_2_5"
+                android:layout_marginBottom="@dimen/size_3"
+                android:text="@string/match_popup_view_message"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/matchScreen_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/size_2"
+                android:layout_marginRight="@dimen/size_2"
+                android:layout_marginBottom="@dimen/size_1_5"
+                android:visibility="gone"
+                android:text="@string/encounters_mutual_send_message" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/matchScreen_sendSmile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/size_2"
+                android:layout_marginRight="@dimen/size_2"
+                android:theme="@style/Button.SayHello"
+                android:text="@string/say_hello"
+                android:textColor="@color/black"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/matchScreen_sendGift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/size_2"
+                android:layout_marginRight="@dimen/size_2"
+                android:text="@string/match_popup_gift_send"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/view_shadow_overlay" />
+
+    <ImageView
+        android:id="@+id/matchScreen_close"
+        android:layout_width="@dimen/size_6_75"
+        android:layout_height="@dimen/size_6_75"
+        android:padding="@dimen/size_0_5"
+        android:scaleType="centerInside"
+        android:tint="@color/white"
+        app:backgroundTint="@color/black_1_alpha_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_profile_no" />
+
+    <ProgressBar
+        android:id="@+id/matchScreen_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<include
+        layout="@layout/view_write_message_cta_container"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/instant_chat_height"
+        android:layout_marginLeft="@dimen/match_chat_side_margin"
+        android:layout_marginRight="@dimen/match_chat_side_margin"
+        android:layout_marginBottom="@dimen/match_chat_bottom_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_max="@dimen/mutual_attraction_chat_input_width" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

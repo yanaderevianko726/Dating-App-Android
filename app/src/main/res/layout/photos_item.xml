@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_photo_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.utils.RelativeGridViewItem
+        android:id="@+id/photos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/white"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/selection"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_checked"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"/>
+
+    </com.sugardaddy.citascasualesconocergentenuevacercadeti.utils.RelativeGridViewItem>
+
+
+</RelativeLayout>

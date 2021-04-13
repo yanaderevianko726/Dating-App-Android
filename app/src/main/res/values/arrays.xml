@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="my_facebook_permissions">
+        <item>public_profile</item>
+        <item>user_friends</item>
+    </string-array>
+
+    <integer-array name="textSizesForAutoSize">
+        <item>13</item>
+        <item>15</item>
+        <item>16</item>
+    </integer-array>
+
+</resources>

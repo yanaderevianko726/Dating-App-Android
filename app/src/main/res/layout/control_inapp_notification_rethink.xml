@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_inapp_notification_rethink_shadow"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="20dp">
+
+    <FrameLayout
+        android:id="@+id/inapp_notification_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/notification_background_rounded_with_border"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/inapp_notification_imageFrame"
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.RoundedImage
+                    android:id="@+id/inapp_notification_photo1"
+                    android:layout_width="70dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop" />
+
+                <!--<ImageView
+                    android:id="@+id/inapp_notification_photo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop" />-->
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/inapp_notification_badge_container"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="-20dp"
+                android:layout_marginLeft="-20dp">
+
+                <TextView
+                    android:id="@+id/inapp_notification_badgeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_inapp_notification_badge_rethink_text"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:minWidth="28dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/inapp_notification_badgeDrawable"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_badge_feature_spotlight" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/inapp_notification_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start|center_vertical|center_horizontal|center|start"
+                    android:maxLines="1"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp"
+                    tools:text="Maravilho Singa"
+                    android:paddingBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/inapp_notification_message"
+                    style="?attr/textStyleInappBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start|center_vertical|center_horizontal|center|start"
+                    android:lineSpacingExtra="-4dp"
+                    android:maxLines="4"
+                    tools:text="New Message received"
+                    android:paddingBottom="14dp" />
+
+
+            </LinearLayout>
+
+           <!-- <include layout="@layout/video_call_layout" />-->
+
+            <ImageView
+                android:id="@+id/inapp_notification_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:srcCompat="@drawable/ic_arrow_right_gray_40" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

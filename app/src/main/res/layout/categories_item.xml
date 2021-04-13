@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:clickable="true"
+    android:paddingStart="10dp"
+    android:paddingLeft="10dp"
+    android:paddingEnd="10dp"
+    android:paddingRight="10dp">
+
+
+    <com.parse.ui.widget.ParseImageView
+        android:id="@+id/categoriesImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitCenter"/>
+
+    <ImageView
+        android:id="@+id/categoriesArrow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/categoriesName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
+        android:layout_toStartOf="@id/categoriesArrow"
+        android:layout_toLeftOf="@id/categoriesArrow"
+        android:gravity="center|start"/>
+</RelativeLayout>

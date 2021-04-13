@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/users_item_layout"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/size_2_5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+            android:id="@+id/peopleNearby_personImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@color/highlight_light_ripple"
+            android:layout_marginBottom="@dimen/size_1_75" />
+
+        <View
+            android:id="@+id/peopleNearby_personSelector"
+            android:background="@drawable/pnb_item_overlay"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/size_1_75" />
+
+        <ImageView
+            android:layout_gravity="bottom|center"
+            android:id="@+id/peopleNearby_personBadge"
+            app:srcCompat="@drawable/ic_location_pointer"
+            android:background="@drawable/bg_circle_location"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:layout_gravity="bottom|center"
+            android:id="@+id/peopleNearby_distance"
+            android:background="@drawable/button_bg_rounded_corners"
+            tools:text="1.0 km"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            android:fontFamily="sans-serif"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/peopleNearby_disabledPersonOverlay"
+            android:background="@drawable/neraby_diabled_person_overlay"
+            android:visibility="gone"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/size_1_75" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/peopleNearby_personName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="100.0dip"
+            android:singleLine="true"
+            tools:text="John Doe"
+            android:drawablePadding="@dimen/size_0_5"
+            android:layout_gravity="center"
+            android:lineSpacingMultiplier="1.0"
+            style="?textStyleP3" />
+
+        <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+            android:id="@+id/peopleNearby_personStatus"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:src="@color/red_500"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="8dp"
+    android:layout_marginEnd="8dp"
+    android:paddingTop="8dp">
+
+    <LinearLayout
+        android:id="@+id/chat_msg"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <com.vanniktech.emoji.EmojiTextView
+            android:id="@+id/text_message_body"
+            tools:text="hello, hello!"
+            android:background="@drawable/bubble_right_rect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="240dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            app:emojiSize="22dp"/>
+
+        <RelativeLayout
+            android:id="@+id/image_lyt"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.RoundedImage
+                android:id="@+id/chatMessage_photo_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                app:rounded_radius="60"/>
+
+            <ProgressBar
+                android:id="@+id/chatMessage_photo_loading"
+                android:layout_centerInParent="true"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:theme="@style/CircularProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+
+        <!--<include
+            layout="@layout/component_chat_message_photo"/>-->
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_below="@+id/chat_msg"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/status_messages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0.5dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            tools:text="Delivered"
+            style="?attr/textStyleP3Gray40"
+            android:visibility="visible" />
+
+        <!--<View
+            android:layout_width="8dp"
+            android:layout_height="1dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/grey_60"/>
+
+        <TextView
+            android:id="@+id/text_message_time"
+            tools:text="11:40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/textStyleP3Gray40" />-->
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

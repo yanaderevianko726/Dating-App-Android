@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="slide_animation_duration">300</integer>
+    <integer name="mutual_attraction_image_rounded_corner">40</integer>
+    <integer name="profile_photo_rounded_corner">30</integer>
+    <integer name="connections_promoTextMaxLines">2</integer>
+</resources>

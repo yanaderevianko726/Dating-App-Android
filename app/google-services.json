@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "212081917392",
+    "firebase_url": "https://chatdate-a973f-default-rtdb.firebaseio.com",
+    "project_id": "chatdate-a973f",
+    "storage_bucket": "chatdate-a973f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212081917392:android:71c10e42559bd7d3878dd5",
+        "android_client_info": {
+          "package_name": "com.amorenlinea.citasyliguesgratisconocerybuscarparejachat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212081917392-rj279ofo8v8vsck5eh6685h3skcto9cf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amorenlinea.citasyliguesgratisconocerybuscarparejachat",
+            "certificate_hash": "61e2e192646bcda4242e8cc3cc72c10357ebb076"
+          }
+        },
+        {
+          "client_id": "212081917392-maboi32g3ht65c34h0d761hmlpp2csaj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsFVND2moRfGtG5e-TsOy6JiOY2Cn7qwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212081917392-maboi32g3ht65c34h0d761hmlpp2csaj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212081917392:android:c56454e6226fe0d8878dd5",
+        "android_client_info": {
+          "package_name": "com.sugardaddy.citascasualesconocergentenuevacercadeti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212081917392-h04uauafkc0d8jjooaanmd3m3102vqma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sugardaddy.citascasualesconocergentenuevacercadeti",
+            "certificate_hash": "61e2e192646bcda4242e8cc3cc72c10357ebb076"
+          }
+        },
+        {
+          "client_id": "212081917392-maboi32g3ht65c34h0d761hmlpp2csaj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsFVND2moRfGtG5e-TsOy6JiOY2Cn7qwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212081917392-maboi32g3ht65c34h0d761hmlpp2csaj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

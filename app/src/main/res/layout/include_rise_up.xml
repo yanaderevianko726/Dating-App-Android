@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="2.0dip"
+        android:paddingRight="8.0dip"
+        android:paddingBottom="4.0dip">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/cardview_radius"
+            app:cardElevation="@dimen/cardview_elevation"
+            app:cardUseCompatPadding="true"
+            app:contentPaddingBottom="24.0dip"
+            app:contentPaddingLeft="20.0dip"
+            app:contentPaddingRight="20.0dip"
+            app:contentPaddingTop="16.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="24.0dip">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/rise_up_rv_image"
+                            android:layout_width="@dimen/size_9"
+                            android:layout_height="@dimen/size_9"
+                            android:layout_marginBottom="@dimen/size_1"
+                            android:scaleType="fitCenter" />
+
+                        <ImageView
+                            android:id="@+id/popularity_promoBadgeRight"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="bottom|center_vertical|center_horizontal|center"
+                            android:layout_marginLeft="@dimen/size_2"
+                            android:background="@drawable/bg_badge_outline"
+                            android:padding="@dimen/stroke_0_5"
+                            app:srcCompat="@drawable/ic_badge_feature_riseup"
+                            android:layout_marginStart="@dimen/size_2" />
+                    </FrameLayout>
+
+                    <TextView
+                        style="?textStyleP1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="16.0dip"
+                        android:paddingEnd="16.0dip"
+                        android:text="@string/rise_up" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/rise_up_rv_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:text="@string/rise_up_title"
+                    android:textColor="@color/white"
+                    android:theme="@style/Button.Rise.Up" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+</merge>

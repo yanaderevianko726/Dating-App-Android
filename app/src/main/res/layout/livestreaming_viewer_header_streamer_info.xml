@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/imageCenterView"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/livestreamingHeader_streamerImage"
+        app:layout_constraintEnd_toEndOf="@+id/livestreamingHeader_streamerImage"
+        app:layout_constraintStart_toStartOf="@+id/livestreamingHeader_streamerImage"
+        app:layout_constraintTop_toTopOf="@+id/livestreamingHeader_streamerImage" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+        android:id="@+id/livestreamingHeader_streamerImage"
+        android:layout_width="@dimen/icon_xlg"
+        android:layout_height="@dimen/icon_xlg"
+        android:layout_marginStart="@dimen/spacing_md"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:layout_marginBottom="@dimen/spacing_md"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/spacing_md" />
+
+    <TextView
+        android:id="@+id/livestreamingHeader_status"
+        style="?attr/textStyleP3Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="26dp"
+        android:padding="1dp"
+        android:text="00:00"
+        android:background="@drawable/bg_livestreaming_rounded_rect_red_carrot"
+        app:layout_constraintBottom_toBottomOf="@+id/livestreamingHeader_streamerImage"
+        app:layout_constraintEnd_toEndOf="@+id/imageCenterView"
+        app:layout_constraintStart_toStartOf="@+id/imageCenterView"
+        app:layout_constraintTop_toBottomOf="@+id/livestreamingHeader_streamerImage" />
+
+    <LinearLayout
+        android:id="@+id/livestreamingHeader_streamerInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_sm"
+        android:layout_marginEnd="@dimen/spacing_md"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/livestreamingHeader_subtitle"
+        app:layout_constraintStart_toEndOf="@+id/livestreamingHeader_streamerImage"
+        app:layout_constraintTop_toTopOf="@+id/livestreamingHeader_streamerImage"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginRight="@dimen/spacing_md"
+        android:layout_marginLeft="@dimen/spacing_sm">
+
+        <TextView
+            android:id="@+id/livestreamingHeader_name"
+            style="?attr/textStyleP2Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxWidth="@dimen/streamer_name_max_width"
+            android:maxLines="1"
+            tools:text="Maravilho, "
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/livestreamingHeader_age"
+            style="?attr/textStyleP2Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="25"
+            android:maxLines="1" />
+
+        <ImageView
+            android:id="@+id/livestreamingHeader_followedStreamer"
+            style="?attr/textStyleP2Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_livestream_favorites_streamer"
+            android:layout_marginLeft="4dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/livestreamingHeader_subtitle"
+        style="?attr/textStyleP3Inverse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_md"
+        android:alpha="0.5"
+        android:ellipsize="end"
+        android:maxWidth="120dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/livestreamingHeader_streamerImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/livestreamingHeader_streamerInfo"
+        app:layout_constraintTop_toBottomOf="@+id/livestreamingHeader_streamerInfo"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginRight="@dimen/spacing_md" />
+</merge>

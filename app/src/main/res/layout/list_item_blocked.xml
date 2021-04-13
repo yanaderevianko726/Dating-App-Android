@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/blocked_users"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal">
+
+        <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/size_8"
+            android:layout_height="@dimen/size_8"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            android:duplicateParentState="true"
+            android:layout_marginStart="@dimen/size_2"
+            android:layout_marginLeft="@dimen/size_2"
+            android:layout_marginTop="@dimen/size_1"
+            android:layout_marginBottom="@dimen/size_1"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/name"
+            style="?attr/textStyleP1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_2"
+            android:layout_marginRight="@dimen/size_2"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:layout_below="@+id/blocked_users"
+        android:background="@color/divider_color" />
+
+</RelativeLayout>

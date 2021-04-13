@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp"
+    android:paddingStart="@dimen/spacing_md"
+    android:paddingEnd="@dimen/spacing_md"
+    android:paddingBottom="@dimen/spacing_md">
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.circularimageview.CircleImageView
+        android:id="@+id/userImageView"
+        android:layout_width="@dimen/icon_xlg"
+        android:layout_height="@dimen/icon_xlg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/systemMessage"
+        style="?attr/textStyleP2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_sm"
+        android:ellipsize="end"
+        android:shadowColor="@color/black_1_alpha_10"
+        android:shadowDx="@dimen/livestream_chat_message_shadow_dx"
+        android:shadowDy="@dimen/livestream_chat_message_shadow_dy"
+        android:shadowRadius="@dimen/livestream_chat_message_shadow_radius"
+        android:textColor="@color/generic_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/userImageView"
+        app:layout_constraintTop_toTopOf="@+id/userImageView"
+        app:layout_constraintWidth_default="wrap"
+        android:layout_marginLeft="@dimen/spacing_sm" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/giftImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="4dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:layout_constraintStart_toEndOf="@+id/userImageView"
+        app:layout_constraintStart_toStartOf="@+id/systemMessage"
+        app:layout_constraintTop_toBottomOf="@+id/systemMessage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

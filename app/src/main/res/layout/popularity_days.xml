@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/size_6"
+        android:layout_weight="0.5" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.utils.ToggleableRadioButton
+        android:id="@+id/popularity_days_1"
+        android:visibility="visible"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        style="@style/PopularityDay"
+        tools:text="1" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.utils.ToggleableRadioButton
+        android:id="@+id/popularity_days_2"
+        android:visibility="visible"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        style="@style/PopularityDay"
+        tools:text="2" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.utils.ToggleableRadioButton
+        android:id="@+id/popularity_days_3"
+        android:visibility="visible"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        style="@style/PopularityDay"
+        tools:text="3" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.utils.ToggleableRadioButton
+        android:id="@+id/popularity_days_4"
+        android:visibility="visible"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        style="@style/PopularityDay"
+        tools:text="4" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.utils.ToggleableRadioButton
+        android:id="@+id/popularity_days_5"
+        android:visibility="visible"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        style="@style/PopularityDay"
+        tools:text="5" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.utils.ToggleableRadioButton
+        android:id="@+id/popularity_days_6"
+        android:visibility="visible"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        style="@style/PopularityDay"
+        tools:text="6" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.utils.ToggleableRadioButton
+        android:id="@+id/popularity_today"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/PopularityDay"
+        android:text="@string/popularity_today"
+        android:layout_weight="1.0" />
+
+    <View
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/size_6"
+        android:layout_weight="0.5"/>
+
+</RadioGroup>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_marginTop="20dp"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="2.0dip"
+        android:paddingRight="8.0dip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="24.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/avatar" android:layout_width="@dimen/size_9" android:layout_height="@dimen/size_9" android:layout_marginBottom="@dimen/size_1" android:scaleType="fitCenter"/>
+                <ImageView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/popularity_promoBadgeRight" android:background="@drawable/bg_badge_outline" android:padding="@dimen/stroke_0_5" android:layout_width="26dp" android:layout_height="26dp" android:layout_marginLeft="@dimen/size_2" app:srcCompat="@drawable/ic_badge_feature_spotlight"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:paddingEnd="16.0dip"
+                android:paddingStart="16.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/quantum_grey800"
+                android:text="@string/get_more_visits_explain"
+                style="?textStyleP1" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

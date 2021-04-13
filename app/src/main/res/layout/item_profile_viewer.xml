@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="@dimen/encounters_card_rounded_corner_margin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:shimmer_direction="left_to_right"
+                app:shimmer_highlight_color="@color/white"
+                app:shimmer_base_color="@color/white"
+                app:shimmer_duration="1500">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/encounters_skeleton_root"
+                    android:layout_width="match_parent"
+                    android:background="@color/grey_10"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/encounters_skeleton_profileInfoView"
+                        android:layout_width="116dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/skeleton_encounter_top"
+                        app:layout_constraintBottom_toTopOf="@+id/encounters_skeleton_profileWork"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <View
+                        android:id="@+id/encounters_skeleton_profileWork"
+                        android:layout_width="152dp"
+                        android:layout_height="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toTopOf="@+id/encounters_skeleton_profileEducation"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:background="@drawable/skeleton_encounter_bottom" />
+
+                    <View
+                        android:id="@+id/encounters_skeleton_profileEducation"
+                        android:layout_width="152dp"
+                        android:layout_height="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/encounters_skeleton_buttonBarGuideline"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:background="@drawable/skeleton_encounter_bottom" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/encounters_skeleton_buttonBarGuideline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.868673" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.shimmer.ShimmerFrameLayout>
+
+            <include layout="@layout/include_profile_view"/>
+
+            <include layout="@layout/include_profile_view_basic_info"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/external_chat_input_view"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="7dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="15dp"
+        android:paddingStart="15dp"
+        android:paddingRight="2dp"
+        android:paddingEnd="2dp"
+        android:background="@drawable/quick_chat_bg_rounded_corners"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/external_chat_input_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:background="@drawable/quick_chat_bg_rounded_corners"
+            android:hint="@string/write_a_message" />
+
+        <ImageView
+            android:id="@+id/send_message"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="6dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_circle_location"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_chat_send"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

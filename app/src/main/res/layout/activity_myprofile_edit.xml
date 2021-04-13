@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editMyProfile_container"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background_transparent"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <TextView
+            style="?attr/textStyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="@string/own_profile_edit_action" />
+
+        <ImageView
+            android:id="@+id/editMyProfile_preview"
+            android:layout_width="@dimen/icon_md"
+            android:layout_height="@dimen/icon_md"
+            android:layout_gravity="end"
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/ic_navigation_bar_visible"
+            android:layout_marginEnd="16dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/editMyProfile_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/editMyProfile_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/editMyProfile_addPhoto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:singleLine="true"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/bg_button_outline_primary"
+                        android:text="@string/action_UploadPhoto" />
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/editMyProfile_addVideo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/bg_button_outline_primary"
+                        android:visibility="gone"
+                        android:text="@string/profile_add_video_plural" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp" />
+
+                <LinearLayout
+                    android:id="@+id/editMyProfile_basicInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="16dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="12dp"
+                    android:paddingRight="12dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center"
+
+                    android:clipToPadding="false">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/basic_info"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/basic_info"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="Katia Mangala, 24, Ffemale"
+                        android:textSize="16sp"
+                        android:gravity="end"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="sans-serif" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/ic_arrow_right_gray"
+                        app:tint="@color/gray_dark" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/divider_color" />
+
+                <LinearLayout
+                    android:id="@+id/editMyProfile_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="16dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="12dp"
+                    android:paddingRight="12dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:clipToPadding="false">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_edit_tiw_title"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/what_i_want"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="To see what happens"
+                        android:textSize="16sp"
+                        android:gravity="end"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="sans-serif" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/ic_arrow_right_gray"
+                        app:tint="@color/gray_dark" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/divider_color" />
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp" />
+
+                <TextView
+                    android:id="@+id/editMyProfile_aboutMeLabel"
+                    style="?attr/textStyleH3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:textColor="@color/black"
+                    android:text="@string/own_profile_title_about_you" />
+
+                <TextView
+                    android:id="@+id/editMyProfile_aboutMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/profile_your_about_empty" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/editMyProfile_editFieldsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <!--<LinearLayout
+                    android:id="@+id/editMyProfile_icebreakersContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                   <TextView
+                        style="?attr/textStyleH3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/badoo.profile.questions.wizard.header.title" />
+
+                    <TextView
+                        android:id="@+id/editMyProfile_icebreakerExplanationText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/editMyProfile_icebreakerQuestionsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/editMyProfile_icebreakerAddButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="16dp" />
+                </LinearLayout>-->
+
+                <!--<LinearLayout
+                    android:id="@+id/editMyProfile_instagramContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="?attr/textStyleH3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="12dp"
+                        android:text="@string/photo.upload.instagram.title" />
+
+                    <p030o.C6247ET
+                        android:id="@+id/editMyProfile_instagramView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>-->
+
+               <!-- <com.badoo.mobile.livestream.view.RecordedLivestreamView
+                    android:id="@+id/editMyProfile_livestreamRecorded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:visibility="gone" />-->
+
+                <!--<LinearLayout
+                    android:id="@+id/editMyProfile_interestsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="28dp" />
+
+                    <TextView
+                        style="?attr/textStyleH3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/interests.profile.sectionHeading" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp" />
+
+                    <com.wefika.flowlayout.FlowLayout
+                        android:id="@+id/editMyProfile_interests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/editMyProfile_addInterests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/interests.picker.title"
+                        app:type="radial" />
+                </LinearLayout>-->
+            </LinearLayout>
+
+            <include layout="@layout/layout_edit_profile_fields"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="28dp" />
+
+            <LinearLayout
+                android:id="@+id/editMyProfile_location"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="12dp"
+                android:paddingRight="12dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:clipToPadding="false">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_current_location_title"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:id="@+id/current_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="Luanda"
+                    android:textSize="16sp"
+                    android:gravity="end"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="sans-serif" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/ic_arrow_right_gray"
+                    app:tint="@color/gray_dark" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@color/divider_color" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="28dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/toolbar_elevationShadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0_5"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@drawable/bg_toolbar_elevation_shadow_light" />
+
+</FrameLayout>

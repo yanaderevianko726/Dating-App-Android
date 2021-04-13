@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sugardaddy.citascasualesconocergentenuevacercadeti">
+
+
+    <!--General-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--Internet-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!--Storage-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!--Sensors and Device-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!--Location-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--Account and Notifications-->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+
+    <!--Badge and Shortcut-->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" tools:ignore="ProtectedPermissions" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false"/>
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"/>
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false"/>
+
+    <permission
+        android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.app.Application"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:allowBackup">
+
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:value="face" />
+
+        <activity
+            android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.app.SplashScreen"
+            android:noHistory="true"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            android:theme="@style/ThemeApp.NoWindowPreview">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <!--Network monitoring-->
+
+        <service
+            android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.merlin.MerlinService"
+            android:exported="false" />
+
+        <!-- Google Setup -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key_geo" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id"/>
+
+        <!-- Facebook Integration-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <!--Push notifications services-->
+        <service
+            android:name="com.parse.fcm.ParseFirebaseMessagingService"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.pushNotifications.CustomPushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.authUtils.AngopapoLoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="AngopapoLogin.APP_LOGO"
+                android:resource="@mipmap/ic_launcher"/>
+            <meta-data
+                android:name="AngopapoLogin.PARSE_LOGIN_ENABLED"
+                android:value="true"/>
+            <meta-data
+                android:name="AngopapoLogin.PARSE_LOGIN_EMAIL_AS_USERNAME"
+                android:value="true"/>
+            <meta-data
+                android:name="AngopapoLogin.PARSE_LOGIN_HELP_TEXT"
+                android:value="@string/password_reset_text"/>
+            <meta-data
+                android:name="AngopapoLogin.MIN_PASSWORD_LENGTH"
+                android:value="6"/>
+            <meta-data
+                android:name="AngopapoLogin.FACEBOOK_LOGIN_ENABLED"
+                android:value="true"/>
+            <meta-data
+                android:name="AngopapoLogin.TWITTER_LOGIN_ENABLED"
+                android:value="false"/>
+            <!-- We reference a string-array resource here, so we must use android:resource -->
+            <meta-data
+                android:name="AngopapoLogin.FACEBOOK_LOGIN_PERMISSIONS"
+                android:resource="@array/my_facebook_permissions"/>
+
+        </activity>
+
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.auth.WelcomeActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.authUtils.AngopapoSignupActivity" />
+
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.auth.FacebookLink" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.app.BaseActivity" />
+        <activity
+            android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.app.DispatchActivity"
+            android:noHistory="true"/>
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.HomeActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.uploads.UploadsActivity" />
+
+
+        <activity
+            android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.instagram.InstagramAuthActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:launchMode="singleTask" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.nearby.ManualLocationActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.popularity.PopularityActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.payments.PaymentsActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.settings.SettingsActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.encounters.LikedYouActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.encounters.MutualAttractionActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.profile.PhotosViewerActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.settings.basicInfo.BasicInfoActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.settings.account.AccountActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.settings.accountPreferences.AccountPreferencesActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.settings.accountPreferences.SettingsPrivacyActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.settings.accountPreferences.SettingsInvisibleModeActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.settings.accountPreferences.SettingsNotificationsActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.settings.WebUrlsActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.settings.about.AboutActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.settings.about.AboutAppActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.settings.BlockedUsersActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.profile.ReportBlockActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.profile.EditProfileActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.connections.FeatureActivationActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.connections.ChatActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.calls.CallActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.connections.IncomingActivity"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:theme="@style/MyAppCompatDialogTheme"/>
+
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.live.WalletActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.live.LiveActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.live.LiveStreamingActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.profile.PhotoViewerActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.calls.VoiceCallActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.auth.CountryActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.auth.PhoneLoginActivity" />
+        <activity android:name="com.sugardaddy.citascasualesconocergentenuevacercadeti.home.live.WithdrawListActivity" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/profile_about_me_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="?attr/textStyleH3"
+        android:gravity="center_vertical"
+        tools:text="A vida e uma peca teatral que na qual nos somos os autores.. para que nao saias do palco choramingando decide bem esse final"
+        android:textStyle="normal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/black"
+        android:paddingBottom="4dp" />
+
+    <com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.flowlayout.FlowLayout
+        android:id="@+id/profile_section_about_me_badges_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp">
+
+    </com.sugardaddy.citascasualesconocergentenuevacercadeti.modules.flowlayout.FlowLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/im_here" />
+
+    <TextView
+        android:id="@+id/profile_about_me_what_i_want"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        style="?attr/textStyleH3"
+        android:gravity="center_vertical"
+        tools:text="For something seroius"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:text="@string/profile_current_location_title" />
+
+    <TextView
+        android:id="@+id/profile_about_me_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        style="?attr/textStyleH3"
+        android:gravity="center_vertical"
+        tools:text="Luanda"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:paddingBottom="4dp" />
+
+</merge>

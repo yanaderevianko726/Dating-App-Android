@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="30.0dip"
+        android:paddingRight="30.0dip"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/onBoardingConnectFacebook_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="@dimen/size_2"
+            android:src="@drawable/facebook_icon_preview"
+            android:maxWidth="@dimen/size_12_5" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/onBoardingConnectFacebook_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_2"
+            android:layout_marginBottom="@dimen/size_3"
+            android:text="@string/facebook_onboarding_title"
+            android:textSize="@dimen/textSizeH2" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/onBoardingConnectFacebook_texts"
+            android:layout_marginBottom="@dimen/size_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textColor="@color/black_1_alpha_75"
+                android:gravity="center_vertical"
+                app:drawableLeftCompat="@drawable/ic_reg_check"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/facebook_warning_reason1"
+                android:drawablePadding="@dimen/size_1_25"
+                style="?textStyleActionMedium" />
+
+            <TextView
+                android:textColor="@color/black_1_alpha_75"
+                android:gravity="center_vertical"
+                app:drawableLeftCompat="@drawable/ic_reg_check"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/facebook_warning_reason2"
+                android:drawablePadding="@dimen/size_1_25"
+                style="?textStyleActionMedium" />
+
+            <TextView
+                android:textColor="@color/black_1_alpha_75"
+                android:gravity="center_vertical"
+                app:drawableLeftCompat="@drawable/ic_reg_check"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/facebook_warning_reason3"
+                android:drawablePadding="@dimen/size_1_25"
+                style="?textStyleActionMedium" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_2"
+            android:layout_marginEnd="@dimen/size_2">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/onBoardingConnectFacebook_actionPrimary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                style="?buttonStyleSocialFacebook" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:id="@+id/text_connect_facebook"
+                android:padding="0.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/facebook_onboarding_connect"
+                android:minWidth="0.0dip"
+                android:singleLine="true"
+                android:drawablePadding="@dimen/size_1_25"
+                style="?textStyleActionMedium" />
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progress_bar"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/onBoardingConnectFacebook_actionSecondary"
+            android:background="?selectableItemBackground"
+            android:padding="@dimen/size_2_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/facebook_onboarding_continue"
+            android:textColor="@color/grey_40"
+            style="?textStyleP1Gray40" />
+
+        <Space
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <TextView
+            android:gravity="bottom|center"
+            android:id="@+id/onBoardingConnectFacebook_footer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginTop="@dimen/size_2"
+            android:layout_marginRight="30.0dip"
+            android:layout_marginBottom="@dimen/size_2"
+            android:textColor="@color/grey_40"
+            android:text="@string/landing_facebook_disclaimer"
+            style="?textStyleP2Gray40" />
+    </LinearLayout>
+</ScrollView>

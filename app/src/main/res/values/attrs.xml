@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RangeSeekBar">
+        <!--RangeSeekBar common attrs-->
+
+        <!--The maximum-->
+        <attr format="float" name="rsb_max"/>
+
+        <!--The minimum-->
+        <attr format="float" name="rsb_min"/>
+
+        <!--RangeSeekBar mode, single is normal seekBar, range is RangeSeekBar-->
+        <attr format="enum" name="rsb_mode">
+            <enum name="single" value="1"/>
+            <enum name="range" value="2"/>
+        </attr>
+
+        <!--The min interval of the thumbs -->
+        <attr format="float" name="rsb_range_interval"/>
+
+        <!-- 0 for the normal mode, greater than 1 to switch to scale mode-->
+        <attr format="integer" name="rsb_tick_mark_number"/>
+
+        <!--Scale mode
+        Number according to the scale of the actual proportion of the distribution of the location (markTextArray must be a number)
+        Other bisects the current layout (markTextArray can be any character)
+        -->
+        <attr format="enum" name="rsb_tick_mark_mode">
+            <enum name="number" value="0"/>
+            <enum name="other" value="1"/>
+        </attr>
+
+        <!--The tick mark text gravity -->
+        <attr format="enum" name="rsb_tick_mark_gravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+
+        <!--The tick mark text array -->
+        <attr format="reference" name="rsb_tick_mark_text_array"/>
+
+        <!--The tick mark text margin bottom to progress -->
+        <attr format="dimension" name="rsb_tick_mark_text_margin"/>
+
+        <attr format="dimension" name="rsb_tick_mark_text_size"/>
+
+        <attr format="color" name="rsb_tick_mark_text_color"/>
+
+        <!--it just work in range && number mode now-->
+        <attr format="color" name="rsb_tick_mark_in_range_text_color"/>
+
+        <attr format="dimension" name="rsb_progress_height"/>
+
+        <attr format="dimension" name="rsb_progress_radius"/>
+
+        <!--the color of progress bar when in progress-->
+        <attr format="color" name="rsb_progress_color"/>
+
+        <!--the default color of the progress bar-->
+        <attr format="color" name="rsb_progress_default_color"/>
+
+        <attr name="color_feature_attention_boost" format="color" />
+
+        <!--the vertical RangeSeekBar draw orientation-->
+        <attr format="enum" name="rsb_orientation">
+            <enum name="left" value="-1"/>
+            <enum name="right" value="1"/>
+        </attr>
+
+        <!--SeekBar attrs-->
+        <attr format="enum" name="rsb_indicator_show_mode">
+            <enum name="showWhenTouch" value="0"/>
+            <enum name="alwaysHide" value="1"/>
+            <enum name="alwaysShowAfterTouch" value="2"/>
+            <enum name="alwaysShow" value="3"/>
+        </attr>
+        <attr format="dimension" name="rsb_indicator_height"/>
+        <attr format="dimension" name="rsb_indicator_width"/>
+        <!--indicator margin bottom to progress bar-->
+        <attr format="dimension" name="rsb_indicator_margin"/>
+        <attr format="dimension" name="rsb_indicator_text_size"/>
+        <attr format="color" name="rsb_indicator_text_color"/>
+        <!--indicator arrow size, it just work when you not use rsb_indicator_drawable -->
+        <attr format="dimension" name="rsb_indicator_arrow_size"/>
+        <!-- must use 9 path ！！！-->
+        <attr format="reference" name="rsb_indicator_drawable"/>
+        <attr format="color" name="rsb_indicator_background_color"/>
+        <attr format="dimension" name="rsb_indicator_padding_left"/>
+        <attr format="dimension" name="rsb_indicator_padding_right"/>
+        <attr format="dimension" name="rsb_indicator_padding_top"/>
+        <attr format="dimension" name="rsb_indicator_padding_bottom"/>
+        <attr format="dimension" name="rsb_indicator_radius"/>
+        <attr format="reference" name="rsb_thumb_drawable"/>
+        <!--the thumb inactivated is when you don't touch the thumb button-->
+        <attr format="reference" name="rsb_thumb_inactivated_drawable"/>
+        <attr format="dimension" name="rsb_thumb_size"/>
+        <attr format="float" name="rsb_thumb_scale_ratio"/>
+    </declare-styleable>
+
+    <!--Circle ImageView-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <!-- {@deprecated Use civ_circlebackground_color instead.} -->
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <attr name="sephiroth_rangeProgressBarStyle" format="reference" />
+    <attr name="sephiroth_rangeSeekBarStyle" format="reference" />
+    <attr name="sephiroth_rangeSeekBarStyleInverse" format="reference" />
+
+    <attr name="buttonStylePrimary" format="reference" />
+    <attr name="buttonStyleSecondary" format="reference" />
+    <attr name="buttonTintColor" format="reference|color" />
+    <attr name="buttonColor" format="color" />
+    <attr name="buttonStyleButtonSmall" format="reference" />
+    <attr name="buttonStyleSocialFacebook" format="reference" />
+    <attr name="buttonStyleSocialInstagram" format="reference" />
+    <attr name="buttonStyleTertiary" format="reference" />
+
+    <attr name="textStyleH1" format="reference" />
+    <attr name="textStyleActionMedium" format="reference" />
+    <attr name="textStyleP1" format="reference" />
+    <attr name="textStyleP1Gray40" format="reference" />
+    <attr name="textStyleP2Gray40" format="reference" />
+    <attr name="textStyleP2Gray60" format="reference" />
+    <attr name="textStyleP1Gray60" format="reference" />
+    <attr name="textStyleP3Gray40" format="reference" />
+    <attr name="textStyleTitle" format="reference" />
+    <attr name="textAppearanceHeader3" format="reference" />
+    <attr name="textAppearanceBody1" format="reference" />
+    <attr name="textAppearanceBody3" format="reference" />
+    <attr name="textAppearanceBody3GrayDim" format="reference" />
+    <attr name="textStyleP3" format="reference" />
+    <attr name="textStyleH1Inverse" format="reference">
+    </attr>
+    <attr name="textStyleP3Inverse" format="reference">
+    </attr>
+
+    <attr name="toolbarContentMargin" format="reference|dimension" />
+    <attr name="toolbarDownDrawable" format="reference" />
+    <attr name="toolbarElevationShadow" format="reference" />
+    <attr name="toolbarUpDrawable" format="reference" />
+
+    <attr name="color_feature_riseup" format="color">
+    </attr>
+    <attr name="color_feature_premium" format="color">
+    </attr>
+    <attr name="color_feature_special_delivery" format="color">
+    </attr>
+    <attr name="color_feature_spotlight" format="color">
+    </attr>
+    <attr name="color_feature_undo" format="color">
+    </attr>
+    <attr name="color_feature_chat_with_newbies" format="color">
+    </attr>
+    <attr name="color_feature_chat_with_tired" format="color">
+    </attr>
+    <attr name="color_feature_invisible_mode" format="color">
+    </attr>
+    <attr name="color_feature_liked_you" format="color">
+    </attr>
+    <attr name="color_feature_favourites" format="color">
+    </attr>
+    <attr name="color_feature_extra_shows" format="color">
+    </attr>
+    <attr name="color_feature_bundle_sale" format="color">
+    </attr>
+    <attr name="textStyleP2Inverse" format="reference">
+    </attr>
+    <attr name="textStyleH2" format="reference">
+    </attr>
+    <attr name="textStyleInappBody" format="reference">
+    </attr>
+
+    <attr name="textStyleP1Inverse" format="reference">
+    </attr>
+
+    <attr name="textStyleActionMediumInverse" format="reference">
+    </attr>
+
+    <attr name="color_feature_crush" format="color">
+    </attr>
+
+    <attr name="textStyleP3Gray60" format="reference">
+    </attr>
+
+    <attr name="textStyleH3" format="reference">
+    </attr>
+
+    <attr name="textStyleP2" format="reference">
+    </attr>
+
+    <!--DotsIndicator-->
+    <attr format="color" name="dotsColor"/>
+    <attr format="color" name="dotsStrokeColor"/>
+    <attr format="dimension" name="dotsSize"/>
+    <attr format="float" name="dotsWidthFactor"/>
+    <attr format="dimension" name="dotsSpacing"/>
+    <attr format="dimension" name="dotsCornerRadius"/>
+    <attr format="dimension" name="dotsStrokeWidth"/>
+    <attr format="float" name="stiffness"/>
+    <attr format="float" name="dampingRatio"/>
+
+    <declare-styleable name="DotsIndicator">
+        <attr name="dotsColor"/>
+        <attr name="dotsSize"/>
+        <attr name="dotsWidthFactor"/>
+        <attr name="dotsSpacing"/>
+        <attr name="dotsCornerRadius"/>
+    </declare-styleable>
+
+    <declare-styleable name="SpringDotsIndicator">
+        <attr name="dotsColor"/>
+        <attr name="dotsSize"/>
+        <attr name="dotsSpacing"/>
+        <attr name="dotsCornerRadius"/>
+        <attr name="dotsStrokeWidth"/>
+        <attr name="dotsStrokeColor"/>
+        <attr name="stiffness"/>
+        <attr name="dampingRatio"/>
+    </declare-styleable>
+
+    <declare-styleable name="WormDotsIndicator">
+        <attr name="dotsColor"/>
+        <attr name="dotsSize"/>
+        <attr name="dotsSpacing"/>
+        <attr name="dotsCornerRadius"/>
+        <attr name="dotsStrokeWidth"/>
+        <attr name="dotsStrokeColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="ShimmerFrameLayout">
+        <attr name="shimmer_clip_to_children" format="boolean"/>
+        <attr name="shimmer_colored" format="boolean"/>
+        <attr name="shimmer_base_color" format="color"/>
+        <attr name="shimmer_highlight_color" format="color"/>
+        <attr name="shimmer_base_alpha" format="float"/>
+        <attr name="shimmer_highlight_alpha" format="float"/>
+        <attr name="shimmer_auto_start" format="boolean"/>
+        <attr name="shimmer_duration" format="integer"/>
+        <attr name="shimmer_repeat_count" format="integer"/>
+        <attr name="shimmer_repeat_delay" format="integer"/>
+        <attr name="shimmer_repeat_mode" format="enum">
+            <enum name="restart" value="1"/>
+            <enum name="reverse" value="2"/>
+        </attr>
+        <attr name="shimmer_direction" format="enum">
+            <enum name="left_to_right" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="bottom_to_top" value="3"/>
+        </attr>
+        <attr name="shimmer_dropoff" format="float"/>
+        <attr name="shimmer_fixed_width" format="dimension"/>
+        <attr name="shimmer_fixed_height" format="dimension"/>
+        <attr name="shimmer_intensity" format="float"/>
+        <attr name="shimmer_width_ratio" format="float"/>
+        <attr name="shimmer_height_ratio" format="float"/>
+        <attr name="shimmer_shape" format="enum">
+            <enum name="linear" value="0"/>
+            <enum name="radial" value="1"/>
+        </attr>
+        <attr name="shimmer_tilt" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImage">
+        <attr name="rounded_radius" format="float" />
+    </declare-styleable>
+    <declare-styleable name="CircleImage">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="add_shadow" format="boolean" />
+        <attr name="shadow_color" format="color" />
+        <attr name="shadow_radius" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="PageIndicatorView">
+        <attr name="piv_orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+
+        <attr name="piv_viewPager" format="reference" />
+        <attr name="piv_select" format="integer" />
+
+        <attr name="piv_count" format="integer" />
+        <attr name="piv_dynamicCount" format="boolean" />
+
+        <attr name="piv_radius" format="dimension" />
+        <attr name="piv_padding" format="dimension" />
+        <attr name="piv_strokeWidth" format="dimension" />
+        <attr name="piv_scaleFactor" format="float" />
+        <attr name="piv_autoVisibility" format="boolean" />
+
+        <attr name="piv_unselectedColor" format="color" />
+        <attr name="piv_selectedColor" format="color" />
+
+        <attr name="piv_interactiveAnimation" format="boolean" />
+        <attr name="piv_animationDuration" format="integer" />
+        <attr name="piv_animationType">
+            <enum name="none" value="0" />
+            <enum name="color" value="1" />
+            <enum name="scale" value="2" />
+            <enum name="worm" value="3" />
+            <enum name="slide" value="4" />
+            <enum name="fill" value="5" />
+            <enum name="thinWorm" value="6" />
+            <enum name="drop" value="7" />
+            <enum name="swap" value="8" />
+            <enum name="scale_down" value="9" />
+        </attr>
+        <attr name="piv_rtl_mode">
+            <enum name="on" value="0" />
+            <enum name="off" value="1" />
+            <enum name="auto" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="SliderView">
+
+        <attr name="sliderIndicatorOrientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+
+        <attr name="sliderIndicatorRadius" format="dimension" />
+        <attr name="sliderIndicatorPadding" format="dimension" />
+        <attr name="sliderIndicatorMargin" format="dimension" />
+        <attr name="sliderIndicatorMarginLeft" format="dimension" />
+        <attr name="sliderIndicatorMarginRight" format="dimension" />
+        <attr name="sliderIndicatorMarginTop" format="dimension" />
+        <attr name="sliderIndicatorMarginBottom" format="dimension" />
+
+        <attr name="sliderIndicatorGravity">
+            <flag name="bottom" value="80" />
+            <flag name="center" value="17" />
+            <flag name="center_horizontal" value="1" />
+            <flag name="center_vertical" value="16" />
+            <flag name="clip_horizontal" value="8" />
+            <flag name="clip_vertical" value="128" />
+            <flag name="end" value="8388613" />
+            <flag name="fill" value="119" />
+            <flag name="fill_horizontal" value="7" />
+            <flag name="fill_vertical" value="112" />
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+            <flag name="start" value="8388611" />
+            <flag name="top" value="48" />
+        </attr>
+
+        <attr name="sliderIndicatorUnselectedColor" format="color" />
+        <attr name="sliderIndicatorSelectedColor" format="color" />
+        <attr name="sliderIndicatorAnimationDuration" format="integer" />
+        <attr name="sliderAnimationDuration" format="integer" />
+
+        <attr name="sliderIndicatorRtlMode">
+            <enum name="on" value="0" />
+            <enum name="off" value="1" />
+            <enum name="auto" value="2" />
+        </attr>
+
+        <attr name="sliderScrollTimeInSec" format="integer" />
+
+        <attr name="sliderCircularHandlerEnabled" format="boolean" />
+        <attr name="sliderAutoCycleEnabled" format="boolean" />
+        <attr name="sliderStartAutoCycle" format="boolean" />
+
+        <attr name="sliderAutoCycleDirection">
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+            <enum name="back_and_forth" value="2" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="DiscreteScrollView">
+        <attr name="dsv_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FlowLayout">
+        <attr name="android:gravity" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout_Layout">
+        <attr name="android:layout_gravity" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpansionHeader">
+        <attr name="expansion_layout" format="reference"/>
+        <attr name="expansion_toggleOnClick" format="boolean"/>
+        <attr name="expansion_headerIndicator" format="reference"/>
+        <attr name="expansion_headerIndicatorRotationExpanded" format="integer"/>
+        <attr name="expansion_headerIndicatorRotationCollapsed" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="ExpansionLayout">
+        <attr name="expansion_expanded" format="boolean"/>
+    </declare-styleable>
+
+    <attr name="expansion_openOnlyOne" format="boolean"/>
+
+    <declare-styleable name="ExpansionsViewGroupFrameLayout">
+        <attr name="expansion_openOnlyOne"/>
+    </declare-styleable>
+    <declare-styleable name="ExpansionsViewGroupLinearLayout">
+        <attr name="expansion_openOnlyOne"/>
+    </declare-styleable>
+    <declare-styleable name="ExpansionsViewGroupRelativeLayout">
+        <attr name="expansion_openOnlyOne"/>
+    </declare-styleable>
+    <declare-styleable name="ExpansionsViewGroupConstraintLayout">
+        <attr name="expansion_openOnlyOne"/>
+    </declare-styleable>
+
+</resources>
