@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: io.agora.rtm:rtm-sdk:1.2.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f4d896f515effad2f8cda450281749e/jetified-rtm-sdk-1.2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f4d896f515effad2f8cda450281749e/jetified-rtm-sdk-1.2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f4d896f515effad2f8cda450281749e/jetified-rtm-sdk-1.2.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f4d896f515effad2f8cda450281749e/jetified-rtm-sdk-1.2.2/jars/libs/agora-rtm-sdk.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.agora.rtm/rtm-sdk/1.2.2/c604c89c950494b9a4ec534e38a9fe73cfa0b7dd/rtm-sdk-1.2.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.agora.rtm/rtm-sdk/1.2.2/c604c89c950494b9a4ec534e38a9fe73cfa0b7dd/rtm-sdk-1.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

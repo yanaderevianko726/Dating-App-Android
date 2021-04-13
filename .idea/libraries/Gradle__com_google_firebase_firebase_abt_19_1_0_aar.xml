@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-abt:19.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/50e9fc2323deeecc5dd9469b62b7d823/jetified-firebase-abt-19.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/50e9fc2323deeecc5dd9469b62b7d823/jetified-firebase-abt-19.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/50e9fc2323deeecc5dd9469b62b7d823/jetified-firebase-abt-19.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-abt/19.1.0/302dc5fce796213d8f81ee0e482eb6fd432ffd6b/firebase-abt-19.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-abt/19.1.0/247cd10db79e37f06750c02144139c6f528e5031/firebase-abt-19.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
