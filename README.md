@@ -20,7 +20,9 @@ You have several options on how to get Parse Server as BaaS or install your Self
 
 ## Screenshot
 
-| ![screenshot](android/screenshots/screen_1.jpg)   |   ![screenshot](android/screenshots/screen_2.jpg)     |
+|                Screenshot               | in [PHOLAR](https://play.google.com/store/apps/details?id=com.naver.android.pholar) |
+|:---------------------------------------:|:-------------------------------------:|
+| ![screenshot](android/screenshots/screen_1.jpg)   | ![screenshot](android/screenshots/screen_2.jpg)     |
 
 B) Setup Agora.io 
 This platform uses Agora.io For Calls and Live Stream.
