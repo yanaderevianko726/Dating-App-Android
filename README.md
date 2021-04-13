@@ -1,6 +1,5 @@
 # SugarDaddy
 
-
 A) Setup Backend 
 This platform uses Parse Serever for backend.
 You have several options on how to get Parse Server as BaaS or install your Self-hosted Parse Server.
@@ -18,6 +17,10 @@ You have several options on how to get Parse Server as BaaS or install your Self
 • Open source folder.
 • Open cloud_code folder.
 • Upload main.js file to your Parse Server Cloud code location.
+
+## Screenshot
+
+| ![screenshot](android/screenshots/screen_1.jpg)   | ![screenshot](android/screenshots/screen_1.jpg)     |
 
 B) Setup Agora.io 
 This platform uses Agora.io For Calls and Live Stream.
