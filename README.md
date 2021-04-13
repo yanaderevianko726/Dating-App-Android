@@ -54,6 +54,12 @@ Go to Facebook developer Login or Signup.
 
 * You need to Generate Key hash for facebook Login to work.
 
+## Screenshot
+
+|                Screenshot               | Screenshot |
+|:---------------------------------------:|:-------------------------------------:|
+| ![screenshot](android/screenshots/screen_3.jpg)   | ![screenshot](android/screenshots/screen_4.jpg)     |
+
 D) Setup Instagram App 
 This platform uses Instagram Developer To get User's instagram photos.
 Go to Facebook developer Login or Signup.
