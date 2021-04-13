@@ -8,7 +8,7 @@ You have several options on how to get Parse Server as BaaS or install your Self
 
 |                Screenshot               | Screenshot |
 |:---------------------------------------:|:-------------------------------------:|
-| ![screenshot](android/screenshots/screens_8.jpg)   | ![screenshot](android/screenshots/screens_5.jpg)     |
+| ![screenshot](android/screenshots/screens_8.jpg)   | ![screenshot](android/screenshots/screen_1.jpg)     |
 
 - Cloud Services: There are several companies offering Parse Server.
 • Back4app (Recommended)
@@ -28,7 +28,7 @@ You have several options on how to get Parse Server as BaaS or install your Self
 
 |                Screenshot               | Screenshot |
 |:---------------------------------------:|:-------------------------------------:|
-| ![screenshot](android/screenshots/screens_7.jpg)   | ![screenshot](android/screenshots/screen_3.jpg)     |
+| ![screenshot](android/screenshots/screen_2.jpg)   | ![screenshot](android/screenshots/screen_3.jpg)     |
 
 B) Setup Agora.io 
 This platform uses Agora.io For Calls and Live Stream.
@@ -47,7 +47,7 @@ Go to Firebase developer console and Create a project.
 
 |                Screenshot               | Screenshot |
 |:---------------------------------------:|:-------------------------------------:|
-| ![screenshot](android/screenshots/screen_1.jpg)   | ![screenshot](android/screenshots/screen_4.jpg)     |
+| ![screenshot](android/screenshots/screens_7.jpg)   | ![screenshot](android/screenshots/screens_5.jpg)     |
 
 • Click in add app
 • Choose android
@@ -70,7 +70,7 @@ Go to Facebook developer Login or Signup.
 
 |                Screenshot               | Screenshot |
 |:---------------------------------------:|:-------------------------------------:|
-| ![screenshot](android/screenshots/screen_2.jpg)   | ![screenshot](android/screenshots/screens_6.jpg)     |
+| ![screenshot](android/screenshots/screen_4.jpg)   | ![screenshot](android/screenshots/screens_6.jpg)     |
 
 D) Setup Instagram App 
 This platform uses Instagram Developer To get User's instagram photos.
