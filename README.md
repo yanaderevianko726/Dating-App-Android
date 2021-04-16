@@ -55,9 +55,9 @@ Go to Facebook developer Login or Signup.
 
 ## Screenshot
 
-|                Screenshot               |                 Screenshot            |               Screenshot              |
-|:---------------------------------------:|:-------------------------------------:|:-------------------------------------:|
-| ![screenshot](android/screenshots/screen_2.jpg)   | ![screenshot](android/screenshots/screen_4.jpg)     | ![screenshot](android/screenshots/screens_6.jpg)   |
+|                Screenshot               |               Screenshot              |
+|:---------------------------------------:|:-------------------------------------:|
+| ![screenshot](android/screenshots/screen_2.jpg)   |![screenshot](android/screenshots/screens_6.jpg)   |
 
 • Select Facebook Login product and click the Set Up.
 • Select Android as the App platform.
