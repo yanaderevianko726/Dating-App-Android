@@ -26,9 +26,10 @@ You have several options on how to get Parse Server as BaaS or install your Self
 
 ## Screenshot
 
-|                Screenshot               | Screenshot |
-|:---------------------------------------:|:-------------------------------------:|
-| ![screenshot](android/screenshots/screens_7.jpg)   | ![screenshot](android/screenshots/screen_3.jpg)     |
+|                Screenshot               |                 Screenshot            |               Screenshot              |
+|:---------------------------------------:|:-------------------------------------:|:-------------------------------------:|
+| ![screenshot](android/screenshots/screens_7.jpg)   | ![screenshot](android/screenshots/screens_3.jpg)     | ![screenshot](android/screenshots/screens_2.jpg)   |
+
 
 B) Setup Agora.io 
 This platform uses Agora.io For Calls and Live Stream.
@@ -45,9 +46,9 @@ Go to Firebase developer console and Create a project.
 
 ## Screenshot
 
-|                Screenshot               | Screenshot |
-|:---------------------------------------:|:-------------------------------------:|
-| ![screenshot](android/screenshots/screen_2.jpg)   | ![screenshot](android/screenshots/screens_5.jpg)     |
+|                Screenshot               |                 Screenshot            |               Screenshot              |
+|:---------------------------------------:|:-------------------------------------:|:-------------------------------------:|
+| ![screenshot](android/screenshots/screens_5.jpg)   | ![screenshot](android/screenshots/screens_4.jpg)     | ![screenshot](android/screenshots/screens_6.jpg)   |
 
 • Click in add app
 • Choose android
@@ -65,12 +66,6 @@ Go to Facebook developer Login or Signup.
 • Copy facebook_app_id and fb_login_protocol_scheme the Save for later use..
 
 * You need to Generate Key hash for facebook Login to work.
-
-## Screenshot
-
-|                Screenshot               | Screenshot |
-|:---------------------------------------:|:-------------------------------------:|
-| ![screenshot](android/screenshots/screen_4.jpg)   | ![screenshot](android/screenshots/screens_6.jpg)     |
 
 D) Setup Instagram App 
 This platform uses Instagram Developer To get User's instagram photos.
