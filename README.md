@@ -22,7 +22,7 @@ You have several options on how to get Parse Server as BaaS or install your Self
 
 |                Screenshot               |                 Screenshot            |               Screenshot              |
 |:---------------------------------------:|:-------------------------------------:|:-------------------------------------:|
-| ![screenshot](android/screenshots/screens_7.jpg)   | ![screenshot](android/screenshots/screen_3.jpg)     | ![screenshot](android/screenshots/screen_2.jpg)   |
+| ![screenshot](android/screenshots/screens_8.jpg)   | ![screenshot](android/screenshots/screen_1.jpg)     | ![screenshot](android/screenshots/screen_3.jpg)   |
 
 
 B) Setup Agora.io 
@@ -42,7 +42,7 @@ Go to Firebase developer console and Create a project.
 
 |                Screenshot               |                 Screenshot            |               Screenshot              |
 |:---------------------------------------:|:-------------------------------------:|:-------------------------------------:|
-| ![screenshot](android/screenshots/screens_5.jpg)   | ![screenshot](android/screenshots/screen_4.jpg)     | ![screenshot](android/screenshots/screens_6.jpg)   |
+| ![screenshot](android/screenshots/screens_5.jpg)   | ![screenshot](android/screenshots/screens_7.jpg)     | ![screenshot](android/screenshots/screen_4.jpg)   |
 
 • Click in add app
 • Choose android
@@ -52,6 +52,12 @@ Go to Firebase developer console and Create a project.
 D) Setup Facebook Login
 This platform has Facebook Login feature Facebook Developer To get data from User facebook, Photos or just to link.
 Go to Facebook developer Login or Signup.
+
+## Screenshot
+
+|                Screenshot               |                 Screenshot            |               Screenshot              |
+|:---------------------------------------:|:-------------------------------------:|:-------------------------------------:|
+| ![screenshot](android/screenshots/screen_2.jpg)   | ![screenshot](android/screenshots/screen_4.jpg)     | ![screenshot](android/screenshots/screens_6.jpg)   |
 
 • Select Facebook Login product and click the Set Up.
 • Select Android as the App platform.
